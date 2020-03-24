@@ -1,0 +1,49 @@
+C:\Users\fio_d\OneDrive\Documentos\Visual Studio 2019\Libreria\Libreria\bin\Debug\Libreria.exe.config
+C:\Users\fio_d\OneDrive\Documentos\Visual Studio 2019\Libreria\Libreria\bin\Debug\Libreria.exe
+C:\Users\fio_d\OneDrive\Documentos\Visual Studio 2019\Libreria\Libreria\bin\Debug\Libreria.pdb
+C:\Users\fio_d\OneDrive\Documentos\Visual Studio 2019\Libreria\Libreria\obj\Debug\Libreria.csprojAssemblyReference.cache
+C:\Users\fio_d\OneDrive\Documentos\Visual Studio 2019\Libreria\Libreria\obj\Debug\Libreria.Properties.Resources.resources
+C:\Users\fio_d\OneDrive\Documentos\Visual Studio 2019\Libreria\Libreria\obj\Debug\Libreria.csproj.GenerateResource.cache
+C:\Users\fio_d\OneDrive\Documentos\Visual Studio 2019\Libreria\Libreria\obj\Debug\Libreria.exe
+C:\Users\fio_d\OneDrive\Documentos\Visual Studio 2019\Libreria\Libreria\obj\Debug\Libreria.pdb
+C:\Users\fio_d\OneDrive\Documentos\Visual Studio 2019\Libreria\Libreria\obj\Debug\Libreria.MantenimeintoF.resources
+C:\Users\fio_d\OneDrive\Documentos\Visual Studio 2019\Libreria\Libreria\obj\Debug\Libreria.LibrosF.resources
+C:\Users\fio_d\OneDrive\Documentos\Visual Studio 2019\Libreria\Libreria\obj\Debug\Libreria.MenuF.resources
+C:\Users\fio_d\OneDrive\Documentos\Visual Studio 2019\Libreria\Libreria\obj\Debug\Libreria.VerLibrosF.resources
+C:\Users\fio_d\OneDrive\Documentos\Visual Studio 2019\Libreria\Libreria\obj\Debug\Libreria.Form1.resources
+C:\Users\fio_d\OneDrive\Documentos\Visual Studio 2019\Libreria\Libreria\obj\Debug\Libreria.LoginF.resources
+C:\Users\david\Documents\ADS\Libreria\Libreria\bin\Debug\Libreria.exe.config
+C:\Users\david\Documents\ADS\Libreria\Libreria\bin\Debug\Libreria.exe
+C:\Users\david\Documents\ADS\Libreria\Libreria\bin\Debug\Libreria.pdb
+C:\Users\david\Documents\ADS\Libreria\Libreria\obj\Debug\Libreria.csprojAssemblyReference.cache
+C:\Users\david\Documents\ADS\Libreria\Libreria\obj\Debug\Libreria.Form1.resources
+C:\Users\david\Documents\ADS\Libreria\Libreria\obj\Debug\Libreria.LoginF.resources
+C:\Users\david\Documents\ADS\Libreria\Libreria\obj\Debug\Libreria.MantenimeintoF.resources
+C:\Users\david\Documents\ADS\Libreria\Libreria\obj\Debug\Libreria.LibrosF.resources
+C:\Users\david\Documents\ADS\Libreria\Libreria\obj\Debug\Libreria.MenuF.resources
+C:\Users\david\Documents\ADS\Libreria\Libreria\obj\Debug\Libreria.Properties.Resources.resources
+C:\Users\david\Documents\ADS\Libreria\Libreria\obj\Debug\Libreria.VerLibrosF.resources
+C:\Users\david\Documents\ADS\Libreria\Libreria\obj\Debug\Libreria.csproj.GenerateResource.cache
+C:\Users\david\Documents\ADS\Libreria\Libreria\obj\Debug\Libreria.exe
+C:\Users\david\Documents\ADS\Libreria\Libreria\obj\Debug\Libreria.pdb
+C:\Users\david\Documents\ADS\Libreria\Libreria\obj\Debug\Libreria.Busqueda.resources
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\bin\Debug\Libreria.exe.config
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\bin\Debug\Libreria.exe
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\bin\Debug\Libreria.pdb
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\obj\Debug\Libreria.csprojAssemblyReference.cache
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\obj\Debug\Libreria.Form1.resources
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\obj\Debug\Libreria.Busqueda.resources
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\obj\Debug\Libreria.LoginF.resources
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\obj\Debug\Libreria.MantenimeintoF.resources
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\obj\Debug\Libreria.LibrosF.resources
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\obj\Debug\Libreria.MenuF.resources
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\obj\Debug\Libreria.Properties.Resources.resources
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\obj\Debug\Libreria.VerLibrosF.resources
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\obj\Debug\Libreria.csproj.GenerateResource.cache
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\obj\Debug\Libreria.exe
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\obj\Debug\Libreria.pdb
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\bin\Debug\EntityFramework.dll
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\bin\Debug\EntityFramework.xml
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\UDB\Desktop\ped\Libreria\Libreria\Libreria\obj\Debug\Libreria.csproj.CopyComplete

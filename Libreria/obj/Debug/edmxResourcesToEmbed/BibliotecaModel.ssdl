@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BIBLIOTECALEPIIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AUTOR">
+    <Key>
+      <PropertyRef Name="idAutor" />
+    </Key>
+    <Property Name="idAutor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombreAutor" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="idNacionalidad" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EDITORIAL">
+    <Key>
+      <PropertyRef Name="idEditorial" />
+    </Key>
+    <Property Name="idEditorial" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="descEditorial" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LIBRO">
+    <Key>
+      <PropertyRef Name="idLibro" />
+    </Key>
+    <Property Name="idLibro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="titulo" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="isbn" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="publicacion" Type="int" Nullable="false" />
+    <Property Name="idAutor" Type="int" Nullable="false" />
+    <Property Name="idEditorial" Type="int" Nullable="false" />
+    <Property Name="existencias" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NACIONALIDAD">
+    <Key>
+      <PropertyRef Name="idNacionalidad" />
+    </Key>
+    <Property Name="idNacionalidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="decNacionalidad" Type="nvarchar" MaxLength="80" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'BIBLIOTECALEPII.dbo.UBICACION' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="UBICACION">
+    <Key>
+      <PropertyRef Name="idLibro" />
+      <PropertyRef Name="pasillo" />
+      <PropertyRef Name="estante" />
+    </Key>
+    <Property Name="idLibro" Type="int" Nullable="false" />
+    <Property Name="pasillo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="estante" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="usuario" Type="nvarchar" MaxLength="16" Nullable="false" />
+    <Property Name="passwd" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AUTOR_NACIONALIDAD">
+    <End Role="NACIONALIDAD" Type="Self.NACIONALIDAD" Multiplicity="1" />
+    <End Role="AUTOR" Type="Self.AUTOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NACIONALIDAD">
+        <PropertyRef Name="idNacionalidad" />
+      </Principal>
+      <Dependent Role="AUTOR">
+        <PropertyRef Name="idNacionalidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LIBRO_AUTOR">
+    <End Role="AUTOR" Type="Self.AUTOR" Multiplicity="1" />
+    <End Role="LIBRO" Type="Self.LIBRO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AUTOR">
+        <PropertyRef Name="idAutor" />
+      </Principal>
+      <Dependent Role="LIBRO">
+        <PropertyRef Name="idAutor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LIBRO_EDITORIAL">
+    <End Role="EDITORIAL" Type="Self.EDITORIAL" Multiplicity="1" />
+    <End Role="LIBRO" Type="Self.LIBRO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EDITORIAL">
+        <PropertyRef Name="idEditorial" />
+      </Principal>
+      <Dependent Role="LIBRO">
+        <PropertyRef Name="idEditorial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UBICACION_LIBRO">
+    <End Role="LIBRO" Type="Self.LIBRO" Multiplicity="1" />
+    <End Role="UBICACION" Type="Self.UBICACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LIBRO">
+        <PropertyRef Name="idLibro" />
+      </Principal>
+      <Dependent Role="UBICACION">
+        <PropertyRef Name="idLibro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="ENCRIPTAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+    <Parameter Name="texto" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="INSERTAR_USUARIOS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usu" Type="nvarchar" Mode="In" />
+    <Parameter Name="pwd" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="VALIDAR_USUARIO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="usu" Type="nvarchar" Mode="In" />
+    <Parameter Name="pwd" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="BIBLIOTECALEPIIModelStoreContainer">
+    <EntitySet Name="AUTOR" EntityType="Self.AUTOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EDITORIAL" EntityType="Self.EDITORIAL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LIBRO" EntityType="Self.LIBRO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NACIONALIDAD" EntityType="Self.NACIONALIDAD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UBICACION" EntityType="Self.UBICACION" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [UBICACION].[idLibro] AS [idLibro], 
+    [UBICACION].[pasillo] AS [pasillo], 
+    [UBICACION].[estante] AS [estante]
+    FROM [dbo].[UBICACION] AS [UBICACION]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_AUTOR_NACIONALIDAD" Association="Self.FK_AUTOR_NACIONALIDAD">
+      <End Role="NACIONALIDAD" EntitySet="NACIONALIDAD" />
+      <End Role="AUTOR" EntitySet="AUTOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LIBRO_AUTOR" Association="Self.FK_LIBRO_AUTOR">
+      <End Role="AUTOR" EntitySet="AUTOR" />
+      <End Role="LIBRO" EntitySet="LIBRO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LIBRO_EDITORIAL" Association="Self.FK_LIBRO_EDITORIAL">
+      <End Role="EDITORIAL" EntitySet="EDITORIAL" />
+      <End Role="LIBRO" EntitySet="LIBRO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UBICACION_LIBRO" Association="Self.FK_UBICACION_LIBRO">
+      <End Role="LIBRO" EntitySet="LIBRO" />
+      <End Role="UBICACION" EntitySet="UBICACION" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

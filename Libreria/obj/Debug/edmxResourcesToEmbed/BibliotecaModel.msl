@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BIBLIOTECALEPIIModelStoreContainer" CdmEntityContainer="Contexto">
+    <EntitySetMapping Name="AUTORs">
+      <EntityTypeMapping TypeName="BIBLIOTECALEPIIModel.AUTOR">
+        <MappingFragment StoreEntitySet="AUTOR">
+          <ScalarProperty Name="idAutor" ColumnName="idAutor" />
+          <ScalarProperty Name="nombreAutor" ColumnName="nombreAutor" />
+          <ScalarProperty Name="idNacionalidad" ColumnName="idNacionalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EDITORIALs">
+      <EntityTypeMapping TypeName="BIBLIOTECALEPIIModel.EDITORIAL">
+        <MappingFragment StoreEntitySet="EDITORIAL">
+          <ScalarProperty Name="idEditorial" ColumnName="idEditorial" />
+          <ScalarProperty Name="descEditorial" ColumnName="descEditorial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LIBROes">
+      <EntityTypeMapping TypeName="BIBLIOTECALEPIIModel.LIBRO">
+        <MappingFragment StoreEntitySet="LIBRO">
+          <ScalarProperty Name="idLibro" ColumnName="idLibro" />
+          <ScalarProperty Name="titulo" ColumnName="titulo" />
+          <ScalarProperty Name="isbn" ColumnName="isbn" />
+          <ScalarProperty Name="publicacion" ColumnName="publicacion" />
+          <ScalarProperty Name="idAutor" ColumnName="idAutor" />
+          <ScalarProperty Name="idEditorial" ColumnName="idEditorial" />
+          <ScalarProperty Name="existencias" ColumnName="existencias" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NACIONALIDADs">
+      <EntityTypeMapping TypeName="BIBLIOTECALEPIIModel.NACIONALIDAD">
+        <MappingFragment StoreEntitySet="NACIONALIDAD">
+          <ScalarProperty Name="idNacionalidad" ColumnName="idNacionalidad" />
+          <ScalarProperty Name="decNacionalidad" ColumnName="decNacionalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="BIBLIOTECALEPIIModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="usuario1" ColumnName="usuario" />
+          <ScalarProperty Name="passwd" ColumnName="passwd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UBICACIONs">
+      <EntityTypeMapping TypeName="BIBLIOTECALEPIIModel.UBICACION">
+        <MappingFragment StoreEntitySet="UBICACION">
+          <ScalarProperty Name="idLibro" ColumnName="idLibro" />
+          <ScalarProperty Name="pasillo" ColumnName="pasillo" />
+          <ScalarProperty Name="estante" ColumnName="estante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="INSERTAR_USUARIOS" FunctionName="BIBLIOTECALEPIIModel.Store.INSERTAR_USUARIOS" />
+    <FunctionImportMapping FunctionImportName="VALIDAR_USUARIO" FunctionName="BIBLIOTECALEPIIModel.Store.VALIDAR_USUARIO">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BIBLIOTECALEPIIModel.VALIDAR_USUARIO_Result">
+          <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="passwd" ColumnName="passwd" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

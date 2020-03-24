@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BIBLIOTECALEPIIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="AUTOR">
+    <Key>
+      <PropertyRef Name="idAutor" />
+    </Key>
+    <Property Name="idAutor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombreAutor" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idNacionalidad" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="NACIONALIDAD" Relationship="Self.FK_AUTOR_NACIONALIDAD" FromRole="AUTOR" ToRole="NACIONALIDAD" />
+    <NavigationProperty Name="LIBROes" Relationship="Self.FK_LIBRO_AUTOR" FromRole="AUTOR" ToRole="LIBRO" />
+  </EntityType>
+  <EntityType Name="EDITORIAL">
+    <Key>
+      <PropertyRef Name="idEditorial" />
+    </Key>
+    <Property Name="idEditorial" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descEditorial" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="LIBROes" Relationship="Self.FK_LIBRO_EDITORIAL" FromRole="EDITORIAL" ToRole="LIBRO" />
+  </EntityType>
+  <EntityType Name="LIBRO">
+    <Key>
+      <PropertyRef Name="idLibro" />
+    </Key>
+    <Property Name="idLibro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="titulo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="isbn" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="publicacion" Type="Int32" Nullable="false" />
+    <Property Name="idAutor" Type="Int32" Nullable="false" />
+    <Property Name="idEditorial" Type="Int32" Nullable="false" />
+    <Property Name="existencias" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AUTOR" Relationship="Self.FK_LIBRO_AUTOR" FromRole="LIBRO" ToRole="AUTOR" />
+    <NavigationProperty Name="EDITORIAL" Relationship="Self.FK_LIBRO_EDITORIAL" FromRole="LIBRO" ToRole="EDITORIAL" />
+    <NavigationProperty Name="UBICACIONs" Relationship="Self.FK_UBICACION_LIBRO" FromRole="LIBRO" ToRole="UBICACION" />
+  </EntityType>
+  <EntityType Name="NACIONALIDAD">
+    <Key>
+      <PropertyRef Name="idNacionalidad" />
+    </Key>
+    <Property Name="idNacionalidad" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="decNacionalidad" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="AUTORs" Relationship="Self.FK_AUTOR_NACIONALIDAD" FromRole="NACIONALIDAD" ToRole="AUTOR" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="usuario1" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="passwd" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UBICACION">
+    <Key>
+      <PropertyRef Name="idLibro" />
+      <PropertyRef Name="pasillo" />
+      <PropertyRef Name="estante" />
+    </Key>
+    <Property Name="idLibro" Type="Int32" Nullable="false" />
+    <Property Name="pasillo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="estante" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="LIBRO" Relationship="Self.FK_UBICACION_LIBRO" FromRole="UBICACION" ToRole="LIBRO" />
+  </EntityType>
+  <Association Name="FK_AUTOR_NACIONALIDAD">
+    <End Role="NACIONALIDAD" Type="Self.NACIONALIDAD" Multiplicity="1" />
+    <End Role="AUTOR" Type="Self.AUTOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NACIONALIDAD">
+        <PropertyRef Name="idNacionalidad" />
+      </Principal>
+      <Dependent Role="AUTOR">
+        <PropertyRef Name="idNacionalidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LIBRO_AUTOR">
+    <End Role="AUTOR" Type="Self.AUTOR" Multiplicity="1" />
+    <End Role="LIBRO" Type="Self.LIBRO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AUTOR">
+        <PropertyRef Name="idAutor" />
+      </Principal>
+      <Dependent Role="LIBRO">
+        <PropertyRef Name="idAutor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LIBRO_EDITORIAL">
+    <End Role="EDITORIAL" Type="Self.EDITORIAL" Multiplicity="1" />
+    <End Role="LIBRO" Type="Self.LIBRO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EDITORIAL">
+        <PropertyRef Name="idEditorial" />
+      </Principal>
+      <Dependent Role="LIBRO">
+        <PropertyRef Name="idEditorial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UBICACION_LIBRO">
+    <End Role="LIBRO" Type="Self.LIBRO" Multiplicity="1" />
+    <End Role="UBICACION" Type="Self.UBICACION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LIBRO">
+        <PropertyRef Name="idLibro" />
+      </Principal>
+      <Dependent Role="UBICACION">
+        <PropertyRef Name="idLibro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Contexto" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AUTORs" EntityType="Self.AUTOR" />
+    <EntitySet Name="EDITORIALs" EntityType="Self.EDITORIAL" />
+    <EntitySet Name="LIBROes" EntityType="Self.LIBRO" />
+    <EntitySet Name="NACIONALIDADs" EntityType="Self.NACIONALIDAD" />
+    <EntitySet Name="usuarios" EntityType="Self.usuario" />
+    <EntitySet Name="UBICACIONs" EntityType="Self.UBICACION" />
+    <AssociationSet Name="FK_AUTOR_NACIONALIDAD" Association="Self.FK_AUTOR_NACIONALIDAD">
+      <End Role="NACIONALIDAD" EntitySet="NACIONALIDADs" />
+      <End Role="AUTOR" EntitySet="AUTORs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LIBRO_AUTOR" Association="Self.FK_LIBRO_AUTOR">
+      <End Role="AUTOR" EntitySet="AUTORs" />
+      <End Role="LIBRO" EntitySet="LIBROes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LIBRO_EDITORIAL" Association="Self.FK_LIBRO_EDITORIAL">
+      <End Role="EDITORIAL" EntitySet="EDITORIALs" />
+      <End Role="LIBRO" EntitySet="LIBROes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UBICACION_LIBRO" Association="Self.FK_UBICACION_LIBRO">
+      <End Role="LIBRO" EntitySet="LIBROes" />
+      <End Role="UBICACION" EntitySet="UBICACIONs" />
+    </AssociationSet>
+    <FunctionImport Name="INSERTAR_USUARIOS">
+      <Parameter Name="usu" Mode="In" Type="String" />
+      <Parameter Name="pwd" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="VALIDAR_USUARIO" ReturnType="Collection(BIBLIOTECALEPIIModel.VALIDAR_USUARIO_Result)">
+      <Parameter Name="usu" Mode="In" Type="String" />
+      <Parameter Name="pwd" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="VALIDAR_USUARIO_Result">
+    <Property Type="Int32" Name="idUsuario" Nullable="false" />
+    <Property Type="String" Name="usuario" Nullable="false" MaxLength="16" />
+    <Property Type="String" Name="passwd" Nullable="false" MaxLength="32" />
+  </ComplexType>
+</Schema>

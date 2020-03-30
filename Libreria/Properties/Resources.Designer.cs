@@ -63,6 +63,26 @@ namespace Libreria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap background_book_stack_books_close_up_1148399 {
+            get {
+                object obj = ResourceManager.GetObject("background-book-stack-books-close-up-1148399", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blur_book_stack_books_bookshelves_590493 {
+            get {
+                object obj = ResourceManager.GetObject("blur-book-stack-books-bookshelves-590493", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap libros {
             get {
                 object obj = ResourceManager.GetObject("libros", resourceCulture);

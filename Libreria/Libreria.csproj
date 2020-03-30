@@ -129,6 +129,7 @@
     <Compile Include="VALIDAR_USUARIO_Result.cs">
       <DependentUpon>BibliotecaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="clases\validation.cs" />
     <Compile Include="VerLibrosF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +203,8 @@
     <Content Include="libros.jpg" />
     <Content Include="libros2.jpg" />
     <Content Include="libros3.jpg" />
+    <None Include="Resources\blur-book-stack-books-bookshelves-590493.jpg" />
+    <None Include="Resources\background-book-stack-books-close-up-1148399.jpg" />
     <None Include="Resources\Modificar.png" />
     <None Include="Resources\libros3.jpg" />
     <None Include="Resources\libros2.jpg" />

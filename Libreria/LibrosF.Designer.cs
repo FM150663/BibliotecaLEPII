@@ -28,55 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lblRegresar = new System.Windows.Forms.Label();
+            this.btnVerRegistros = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNacionalidad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbNacionalidad = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cboEstante = new System.Windows.Forms.ComboBox();
+            this.cboPasillo = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtISBN = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtAnioPublicacion = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label5
+            // lblRegresar
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Gill Sans MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(37, 36);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 26);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "< REGRESAR";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.lblRegresar.AutoSize = true;
+            this.lblRegresar.Font = new System.Drawing.Font("Gill Sans MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegresar.ForeColor = System.Drawing.Color.White;
+            this.lblRegresar.Location = new System.Drawing.Point(37, 36);
+            this.lblRegresar.Name = "lblRegresar";
+            this.lblRegresar.Size = new System.Drawing.Size(88, 26);
+            this.lblRegresar.TabIndex = 10;
+            this.lblRegresar.Text = "< REGRESAR";
+            this.lblRegresar.Click += new System.EventHandler(this.label5_Click);
             // 
-            // button1
+            // btnVerRegistros
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(37)))), ((int)(((byte)(24)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(903, 551);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 45);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Ver registros";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnVerRegistros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(37)))), ((int)(((byte)(24)))));
+            this.btnVerRegistros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVerRegistros.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F);
+            this.btnVerRegistros.ForeColor = System.Drawing.Color.White;
+            this.btnVerRegistros.Location = new System.Drawing.Point(903, 551);
+            this.btnVerRegistros.Name = "btnVerRegistros";
+            this.btnVerRegistros.Size = new System.Drawing.Size(161, 45);
+            this.btnVerRegistros.TabIndex = 14;
+            this.btnVerRegistros.Text = "Ver registros";
+            this.btnVerRegistros.UseVisualStyleBackColor = false;
             // 
             // btnAgregar
             // 
@@ -124,18 +129,6 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "ISBN:";
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(60, 309);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(282, 25);
-            this.textBox1.TabIndex = 15;
-            this.textBox1.Text = "_____________________________";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -147,18 +140,6 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Año de publicación:";
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(60, 441);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(282, 25);
-            this.textBox2.TabIndex = 17;
-            this.textBox2.Text = "_____________________________";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -169,18 +150,6 @@
             this.label4.Size = new System.Drawing.Size(106, 28);
             this.label4.TabIndex = 24;
             this.label4.Text = "Existencias:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(397, 441);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(282, 25);
-            this.textBox3.TabIndex = 23;
-            this.textBox3.Text = "_____________________________";
             // 
             // label6
             // 
@@ -228,27 +197,27 @@
             this.comboBox1.Size = new System.Drawing.Size(282, 33);
             this.comboBox1.TabIndex = 26;
             // 
-            // comboBox2
+            // cboEstante
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.ForeColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(21, 200);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(282, 33);
-            this.comboBox2.TabIndex = 30;
+            this.cboEstante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
+            this.cboEstante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboEstante.ForeColor = System.Drawing.Color.White;
+            this.cboEstante.FormattingEnabled = true;
+            this.cboEstante.Location = new System.Drawing.Point(21, 200);
+            this.cboEstante.Name = "cboEstante";
+            this.cboEstante.Size = new System.Drawing.Size(282, 33);
+            this.cboEstante.TabIndex = 30;
             // 
-            // comboBox3
+            // cboPasillo
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.ForeColor = System.Drawing.Color.White;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(21, 73);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(282, 33);
-            this.comboBox3.TabIndex = 29;
+            this.cboPasillo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
+            this.cboPasillo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboPasillo.ForeColor = System.Drawing.Color.White;
+            this.cboPasillo.FormattingEnabled = true;
+            this.cboPasillo.Location = new System.Drawing.Point(21, 73);
+            this.cboPasillo.Name = "cboPasillo";
+            this.cboPasillo.Size = new System.Drawing.Size(282, 33);
+            this.cboPasillo.TabIndex = 29;
             // 
             // label8
             // 
@@ -275,9 +244,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.cboEstante);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.comboBox3);
+            this.groupBox1.Controls.Add(this.cboPasillo);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
@@ -297,28 +266,80 @@
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
+            // txtISBN
+            // 
+            this.txtISBN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
+            this.txtISBN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtISBN.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtISBN.ForeColor = System.Drawing.Color.White;
+            this.txtISBN.Location = new System.Drawing.Point(60, 334);
+            this.txtISBN.Name = "txtISBN";
+            this.txtISBN.Size = new System.Drawing.Size(282, 25);
+            this.txtISBN.TabIndex = 33;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Location = new System.Drawing.Point(60, 334);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(282, 27);
+            this.pictureBox2.TabIndex = 34;
+            this.pictureBox2.TabStop = false;
+            // 
+            // txtAnioPublicacion
+            // 
+            this.txtAnioPublicacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
+            this.txtAnioPublicacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAnioPublicacion.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAnioPublicacion.ForeColor = System.Drawing.Color.White;
+            this.txtAnioPublicacion.Location = new System.Drawing.Point(60, 474);
+            this.txtAnioPublicacion.Name = "txtAnioPublicacion";
+            this.txtAnioPublicacion.Size = new System.Drawing.Size(282, 25);
+            this.txtAnioPublicacion.TabIndex = 35;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Location = new System.Drawing.Point(60, 474);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(282, 27);
+            this.pictureBox3.TabIndex = 36;
+            this.pictureBox3.TabStop = false;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
+            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft YaHei", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.ForeColor = System.Drawing.Color.White;
+            this.numericUpDown1.Location = new System.Drawing.Point(398, 466);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(281, 33);
+            this.numericUpDown1.TabIndex = 37;
+            // 
             // LibrosF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(1117, 633);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.txtAnioPublicacion);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.txtISBN);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.cmbNacionalidad);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnVerRegistros);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNacionalidad);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblRegresar);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -328,6 +349,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,26 +359,28 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblRegresar;
+        private System.Windows.Forms.Button btnVerRegistros;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNacionalidad;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbNacionalidad;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cboEstante;
+        private System.Windows.Forms.ComboBox cboPasillo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtISBN;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.TextBox txtAnioPublicacion;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }

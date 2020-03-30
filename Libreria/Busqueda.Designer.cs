@@ -39,9 +39,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -181,16 +181,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ubicación:";
             // 
-            // label10
+            // label12
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Malgun Gothic", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(53, 96);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(136, 25);
-            this.label10.TabIndex = 32;
-            this.label10.Text = "Algebra Lineal";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(118, 85);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(23, 28);
+            this.label12.TabIndex = 34;
+            this.label12.Text = "3";
             // 
             // label11
             // 
@@ -203,16 +203,16 @@
             this.label11.TabIndex = 33;
             this.label11.Text = "5";
             // 
-            // label12
+            // label10
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(118, 85);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(23, 28);
-            this.label12.TabIndex = 34;
-            this.label12.Text = "3";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Malgun Gothic", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(53, 96);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(136, 25);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Algebra Lineal";
             // 
             // label13
             // 
@@ -305,7 +305,9 @@
             this.Controls.Add(this.mapa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Busqueda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Información del libro";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

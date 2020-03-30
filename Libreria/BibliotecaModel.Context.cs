@@ -14,9 +14,9 @@ namespace Libreria
     using System.Data.Entity.Infrastructure;
     using System.Data.Entity.Core.Objects;
     using System.Linq;
+    using System.ComponentModel;
     using System.Data;
     using System.Collections.Generic;
-    using System.ComponentModel;
 
     public partial class Contexto : DbContext
     {
@@ -62,7 +62,6 @@ namespace Libreria
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<VALIDAR_USUARIO_Result>("VALIDAR_USUARIO", usuParameter, pwdParameter);
         }
-
         public DataTable ConvertToDataTable<T>(IList<T> data)
         {
             PropertyDescriptorCollection properties = TypeDescriptor.GetProperties(typeof(T));

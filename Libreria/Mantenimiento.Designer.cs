@@ -71,11 +71,11 @@
             this.tabPage.Controls.Add(this.tabNacionalidad);
             this.tabPage.Controls.Add(this.tabEditorial);
             this.tabPage.Controls.Add(this.tabAutor);
-            this.tabPage.Location = new System.Drawing.Point(28, 46);
-            this.tabPage.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage.Location = new System.Drawing.Point(37, 57);
+            this.tabPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage.Name = "tabPage";
             this.tabPage.SelectedIndex = 0;
-            this.tabPage.Size = new System.Drawing.Size(730, 436);
+            this.tabPage.Size = new System.Drawing.Size(973, 537);
             this.tabPage.TabIndex = 0;
             // 
             // tabNacionalidad
@@ -89,11 +89,11 @@
             this.tabNacionalidad.Controls.Add(this.label1);
             this.tabNacionalidad.Controls.Add(this.txtNacionalidad);
             this.tabNacionalidad.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F);
-            this.tabNacionalidad.Location = new System.Drawing.Point(4, 22);
-            this.tabNacionalidad.Margin = new System.Windows.Forms.Padding(2);
+            this.tabNacionalidad.Location = new System.Drawing.Point(4, 25);
+            this.tabNacionalidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabNacionalidad.Name = "tabNacionalidad";
-            this.tabNacionalidad.Padding = new System.Windows.Forms.Padding(2);
-            this.tabNacionalidad.Size = new System.Drawing.Size(722, 410);
+            this.tabNacionalidad.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabNacionalidad.Size = new System.Drawing.Size(965, 508);
             this.tabNacionalidad.TabIndex = 0;
             this.tabNacionalidad.Text = "Nacionalidad";
             this.tabNacionalidad.Enter += new System.EventHandler(this.tabNacionalidad_Enter);
@@ -109,13 +109,13 @@
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn2});
             this.dataGridView3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.dataGridView3.Location = new System.Drawing.Point(367, 76);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView3.Location = new System.Drawing.Point(489, 94);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(322, 310);
+            this.dataGridView3.Size = new System.Drawing.Size(429, 382);
             this.dataGridView3.TabIndex = 8;
             this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             // 
@@ -133,10 +133,10 @@
             this.btnRecargarNacionalidad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRecargarNacionalidad.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F);
             this.btnRecargarNacionalidad.ForeColor = System.Drawing.Color.White;
-            this.btnRecargarNacionalidad.Location = new System.Drawing.Point(586, 24);
-            this.btnRecargarNacionalidad.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRecargarNacionalidad.Location = new System.Drawing.Point(781, 30);
+            this.btnRecargarNacionalidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRecargarNacionalidad.Name = "btnRecargarNacionalidad";
-            this.btnRecargarNacionalidad.Size = new System.Drawing.Size(104, 37);
+            this.btnRecargarNacionalidad.Size = new System.Drawing.Size(139, 46);
             this.btnRecargarNacionalidad.TabIndex = 5;
             this.btnRecargarNacionalidad.Text = "Recargar";
             this.btnRecargarNacionalidad.UseVisualStyleBackColor = false;
@@ -148,10 +148,10 @@
             this.btnEliminarNacionalidad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminarNacionalidad.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F);
             this.btnEliminarNacionalidad.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarNacionalidad.Location = new System.Drawing.Point(202, 193);
-            this.btnEliminarNacionalidad.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminarNacionalidad.Location = new System.Drawing.Point(269, 238);
+            this.btnEliminarNacionalidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminarNacionalidad.Name = "btnEliminarNacionalidad";
-            this.btnEliminarNacionalidad.Size = new System.Drawing.Size(104, 37);
+            this.btnEliminarNacionalidad.Size = new System.Drawing.Size(139, 46);
             this.btnEliminarNacionalidad.TabIndex = 4;
             this.btnEliminarNacionalidad.Text = "Eliminar";
             this.btnEliminarNacionalidad.UseVisualStyleBackColor = false;
@@ -163,10 +163,10 @@
             this.btnAgregarNacionalidad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarNacionalidad.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F);
             this.btnAgregarNacionalidad.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarNacionalidad.Location = new System.Drawing.Point(37, 193);
-            this.btnAgregarNacionalidad.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregarNacionalidad.Location = new System.Drawing.Point(49, 238);
+            this.btnAgregarNacionalidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarNacionalidad.Name = "btnAgregarNacionalidad";
-            this.btnAgregarNacionalidad.Size = new System.Drawing.Size(104, 37);
+            this.btnAgregarNacionalidad.Size = new System.Drawing.Size(139, 46);
             this.btnAgregarNacionalidad.TabIndex = 3;
             this.btnAgregarNacionalidad.Text = "Agregar";
             this.btnAgregarNacionalidad.UseVisualStyleBackColor = false;
@@ -177,10 +177,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(34, 58);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(45, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 21);
+            this.label1.Size = new System.Drawing.Size(130, 28);
             this.label1.TabIndex = 2;
             this.label1.Text = "Nacionalidad:";
             // 
@@ -190,10 +189,10 @@
             this.txtNacionalidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNacionalidad.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNacionalidad.ForeColor = System.Drawing.Color.White;
-            this.txtNacionalidad.Location = new System.Drawing.Point(38, 86);
-            this.txtNacionalidad.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNacionalidad.Location = new System.Drawing.Point(51, 106);
+            this.txtNacionalidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNacionalidad.Name = "txtNacionalidad";
-            this.txtNacionalidad.Size = new System.Drawing.Size(212, 21);
+            this.txtNacionalidad.Size = new System.Drawing.Size(283, 25);
             this.txtNacionalidad.TabIndex = 0;
             this.txtNacionalidad.Text = "_____________________________";
             this.txtNacionalidad.Enter += new System.EventHandler(this.txtNacionalidad_Enter);
@@ -208,11 +207,11 @@
             this.tabEditorial.Controls.Add(this.label2);
             this.tabEditorial.Controls.Add(this.txtEditorial);
             this.tabEditorial.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F);
-            this.tabEditorial.Location = new System.Drawing.Point(4, 22);
-            this.tabEditorial.Margin = new System.Windows.Forms.Padding(2);
+            this.tabEditorial.Location = new System.Drawing.Point(4, 25);
+            this.tabEditorial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabEditorial.Name = "tabEditorial";
-            this.tabEditorial.Padding = new System.Windows.Forms.Padding(2);
-            this.tabEditorial.Size = new System.Drawing.Size(722, 410);
+            this.tabEditorial.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabEditorial.Size = new System.Drawing.Size(965, 508);
             this.tabEditorial.TabIndex = 1;
             this.tabEditorial.Text = "Editoriales";
             this.tabEditorial.Enter += new System.EventHandler(this.tabEditorial_Enter);
@@ -228,13 +227,13 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.dataGridView1.Location = new System.Drawing.Point(367, 76);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(489, 94);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(322, 310);
+            this.dataGridView1.Size = new System.Drawing.Size(429, 382);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -252,10 +251,10 @@
             this.btnRecargarEditorial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRecargarEditorial.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F);
             this.btnRecargarEditorial.ForeColor = System.Drawing.Color.White;
-            this.btnRecargarEditorial.Location = new System.Drawing.Point(586, 24);
-            this.btnRecargarEditorial.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRecargarEditorial.Location = new System.Drawing.Point(781, 30);
+            this.btnRecargarEditorial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRecargarEditorial.Name = "btnRecargarEditorial";
-            this.btnRecargarEditorial.Size = new System.Drawing.Size(104, 37);
+            this.btnRecargarEditorial.Size = new System.Drawing.Size(139, 46);
             this.btnRecargarEditorial.TabIndex = 11;
             this.btnRecargarEditorial.Text = "Recargar";
             this.btnRecargarEditorial.UseVisualStyleBackColor = false;
@@ -267,10 +266,10 @@
             this.btnEliminarEditorial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminarEditorial.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F);
             this.btnEliminarEditorial.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarEditorial.Location = new System.Drawing.Point(202, 193);
-            this.btnEliminarEditorial.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminarEditorial.Location = new System.Drawing.Point(269, 238);
+            this.btnEliminarEditorial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminarEditorial.Name = "btnEliminarEditorial";
-            this.btnEliminarEditorial.Size = new System.Drawing.Size(104, 37);
+            this.btnEliminarEditorial.Size = new System.Drawing.Size(139, 46);
             this.btnEliminarEditorial.TabIndex = 10;
             this.btnEliminarEditorial.Text = "Eliminar";
             this.btnEliminarEditorial.UseVisualStyleBackColor = false;
@@ -282,10 +281,10 @@
             this.btnAgregarEditorial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarEditorial.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F);
             this.btnAgregarEditorial.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarEditorial.Location = new System.Drawing.Point(37, 193);
-            this.btnAgregarEditorial.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregarEditorial.Location = new System.Drawing.Point(49, 238);
+            this.btnAgregarEditorial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarEditorial.Name = "btnAgregarEditorial";
-            this.btnAgregarEditorial.Size = new System.Drawing.Size(104, 37);
+            this.btnAgregarEditorial.Size = new System.Drawing.Size(139, 46);
             this.btnAgregarEditorial.TabIndex = 9;
             this.btnAgregarEditorial.Text = "Agregar";
             this.btnAgregarEditorial.UseVisualStyleBackColor = false;
@@ -296,10 +295,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(34, 58);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(45, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 21);
+            this.label2.Size = new System.Drawing.Size(213, 28);
             this.label2.TabIndex = 8;
             this.label2.Text = "Nombre de la editorial:";
             // 
@@ -309,10 +307,10 @@
             this.txtEditorial.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEditorial.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEditorial.ForeColor = System.Drawing.Color.White;
-            this.txtEditorial.Location = new System.Drawing.Point(38, 86);
-            this.txtEditorial.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEditorial.Location = new System.Drawing.Point(51, 106);
+            this.txtEditorial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEditorial.Name = "txtEditorial";
-            this.txtEditorial.Size = new System.Drawing.Size(212, 21);
+            this.txtEditorial.Size = new System.Drawing.Size(283, 25);
             this.txtEditorial.TabIndex = 6;
             this.txtEditorial.Text = "_____________________________";
             this.txtEditorial.Enter += new System.EventHandler(this.txtEditorial_Enter);
@@ -329,11 +327,11 @@
             this.tabAutor.Controls.Add(this.dataGridView2);
             this.tabAutor.Controls.Add(this.txtAutor);
             this.tabAutor.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F);
-            this.tabAutor.Location = new System.Drawing.Point(4, 22);
-            this.tabAutor.Margin = new System.Windows.Forms.Padding(2);
+            this.tabAutor.Location = new System.Drawing.Point(4, 25);
+            this.tabAutor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabAutor.Name = "tabAutor";
-            this.tabAutor.Padding = new System.Windows.Forms.Padding(2);
-            this.tabAutor.Size = new System.Drawing.Size(722, 410);
+            this.tabAutor.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabAutor.Size = new System.Drawing.Size(965, 508);
             this.tabAutor.TabIndex = 2;
             this.tabAutor.Text = "Autores";
             this.tabAutor.Enter += new System.EventHandler(this.tabAutor_Enter);
@@ -345,10 +343,10 @@
             this.cmbNacionalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbNacionalidad.ForeColor = System.Drawing.Color.White;
             this.cmbNacionalidad.FormattingEnabled = true;
-            this.cmbNacionalidad.Location = new System.Drawing.Point(38, 205);
-            this.cmbNacionalidad.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbNacionalidad.Location = new System.Drawing.Point(51, 252);
+            this.cmbNacionalidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbNacionalidad.Name = "cmbNacionalidad";
-            this.cmbNacionalidad.Size = new System.Drawing.Size(212, 29);
+            this.cmbNacionalidad.Size = new System.Drawing.Size(281, 33);
             this.cmbNacionalidad.TabIndex = 13;
             // 
             // label4
@@ -356,10 +354,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(34, 160);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(45, 197);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 21);
+            this.label4.Size = new System.Drawing.Size(130, 28);
             this.label4.TabIndex = 12;
             this.label4.Text = "Nacionalidad:";
             // 
@@ -369,10 +366,10 @@
             this.btnRecargarAutor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRecargarAutor.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F);
             this.btnRecargarAutor.ForeColor = System.Drawing.Color.White;
-            this.btnRecargarAutor.Location = new System.Drawing.Point(586, 24);
-            this.btnRecargarAutor.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRecargarAutor.Location = new System.Drawing.Point(781, 30);
+            this.btnRecargarAutor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRecargarAutor.Name = "btnRecargarAutor";
-            this.btnRecargarAutor.Size = new System.Drawing.Size(104, 37);
+            this.btnRecargarAutor.Size = new System.Drawing.Size(139, 46);
             this.btnRecargarAutor.TabIndex = 11;
             this.btnRecargarAutor.Text = "Recargar";
             this.btnRecargarAutor.UseVisualStyleBackColor = false;
@@ -384,10 +381,10 @@
             this.btnEliminarAutor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminarAutor.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F);
             this.btnEliminarAutor.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarAutor.Location = new System.Drawing.Point(203, 301);
-            this.btnEliminarAutor.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminarAutor.Location = new System.Drawing.Point(271, 370);
+            this.btnEliminarAutor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminarAutor.Name = "btnEliminarAutor";
-            this.btnEliminarAutor.Size = new System.Drawing.Size(104, 37);
+            this.btnEliminarAutor.Size = new System.Drawing.Size(139, 46);
             this.btnEliminarAutor.TabIndex = 10;
             this.btnEliminarAutor.Text = "Eliminar";
             this.btnEliminarAutor.UseVisualStyleBackColor = false;
@@ -399,10 +396,10 @@
             this.btnAgregarAutor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAgregarAutor.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F);
             this.btnAgregarAutor.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarAutor.Location = new System.Drawing.Point(38, 301);
-            this.btnAgregarAutor.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregarAutor.Location = new System.Drawing.Point(51, 370);
+            this.btnAgregarAutor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAgregarAutor.Name = "btnAgregarAutor";
-            this.btnAgregarAutor.Size = new System.Drawing.Size(104, 37);
+            this.btnAgregarAutor.Size = new System.Drawing.Size(139, 46);
             this.btnAgregarAutor.TabIndex = 9;
             this.btnAgregarAutor.Text = "Agregar";
             this.btnAgregarAutor.UseVisualStyleBackColor = false;
@@ -413,10 +410,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(34, 58);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(45, 71);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 21);
+            this.label3.Size = new System.Drawing.Size(90, 28);
             this.label3.TabIndex = 8;
             this.label3.Text = "Nombre:";
             // 
@@ -432,13 +428,13 @@
             this.Nombre,
             this.Nacionalidad});
             this.dataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.dataGridView2.Location = new System.Drawing.Point(366, 76);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView2.Location = new System.Drawing.Point(488, 94);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(322, 310);
+            this.dataGridView2.Size = new System.Drawing.Size(429, 382);
             this.dataGridView2.TabIndex = 7;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
@@ -463,10 +459,10 @@
             this.txtAutor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAutor.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAutor.ForeColor = System.Drawing.Color.White;
-            this.txtAutor.Location = new System.Drawing.Point(38, 86);
-            this.txtAutor.Margin = new System.Windows.Forms.Padding(2);
+            this.txtAutor.Location = new System.Drawing.Point(51, 106);
+            this.txtAutor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAutor.Name = "txtAutor";
-            this.txtAutor.Size = new System.Drawing.Size(212, 21);
+            this.txtAutor.Size = new System.Drawing.Size(283, 25);
             this.txtAutor.TabIndex = 6;
             this.txtAutor.Text = "_____________________________";
             this.txtAutor.Enter += new System.EventHandler(this.txtAutor_Enter);
@@ -476,24 +472,23 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Gill Sans MT Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(28, 12);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(37, 15);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 20);
+            this.label5.Size = new System.Drawing.Size(88, 26);
             this.label5.TabIndex = 9;
             this.label5.Text = "< REGRESAR";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // MantenimeintoF
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(789, 514);
+            this.ClientSize = new System.Drawing.Size(1052, 633);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tabPage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "MantenimeintoF";
             this.Text = "                                                                               ";

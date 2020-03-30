@@ -17,8 +17,8 @@ namespace Libreria
         {
             InitializeComponent();
 
-            label1.BackColor = Color.Transparent;
-            label2.BackColor = Color.Transparent;
+            lblUsuario.BackColor = Color.Transparent;
+            lblPassword.BackColor = Color.Transparent;
             //txtUsuario.BackColor = Color.Transparent;
             //txtPassword.BackColor = Color.Transparent;
         }
@@ -26,15 +26,20 @@ namespace Libreria
         private void LoginF_Load(object sender, EventArgs e)
         {
             this.CenterToScreen();
+            picBoxFondo.BackColor = Color.FromArgb(100, 0, 0, 0);
+            lblPassword.BackColor = Color.FromArgb(100, 0, 0, 0);
+            lblTittle.BackColor = Color.FromArgb(100, 0, 0, 0);
+            lblUsuario.BackColor = Color.FromArgb(100, 0, 0, 0);
+
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
-        {          
+        {
             using (Contexto db = new Contexto())
             {
                 List<Libreria.VALIDAR_USUARIO_Result> lista = new List<Libreria.VALIDAR_USUARIO_Result>();
                 lista = db.VALIDAR_USUARIO(txtUsuario.Text, txtPassword.Text).ToList();
-                if(lista.Count > 0)
+                if (lista.Count > 0)
                 {
                     MenuF n = new MenuF();
                     n.usu = txtUsuario.Text;
@@ -46,6 +51,15 @@ namespace Libreria
                     MessageBox.Show("Usuario o Contraseña incorrecto", "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtPassword.Focus();
                 }
+            }
+        }
+
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar.Equals(Convert.ToChar(13)))
+            {
+                btnIngresar_Click(sender, e);
             }
         }
     }

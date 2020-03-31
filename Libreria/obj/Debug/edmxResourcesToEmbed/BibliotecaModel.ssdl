@@ -34,14 +34,11 @@
     <Property Name="idNacionalidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="decNacionalidad" Type="nvarchar" MaxLength="80" Nullable="false" />
   </EntityType>
-  <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'BIBLIOTECALEPII.dbo.UBICACION' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
   <EntityType Name="UBICACION">
     <Key>
-      <PropertyRef Name="idLibro" />
-      <PropertyRef Name="pasillo" />
-      <PropertyRef Name="estante" />
+      <PropertyRef Name="idUbicacion" />
     </Key>
+    <Property Name="idUbicacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="idLibro" Type="int" Nullable="false" />
     <Property Name="pasillo" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="estante" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -118,14 +115,8 @@ advertencia 6002: La tabla o vista 'BIBLIOTECALEPII.dbo.UBICACION' no tiene defi
     <EntitySet Name="EDITORIAL" EntityType="Self.EDITORIAL" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LIBRO" EntityType="Self.LIBRO" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="NACIONALIDAD" EntityType="Self.NACIONALIDAD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UBICACION" EntityType="Self.UBICACION" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="UBICACION" EntityType="Self.UBICACION" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [UBICACION].[idLibro] AS [idLibro], 
-    [UBICACION].[pasillo] AS [pasillo], 
-    [UBICACION].[estante] AS [estante]
-    FROM [dbo].[UBICACION] AS [UBICACION]</DefiningQuery>
-    </EntitySet>
     <AssociationSet Name="FK_AUTOR_NACIONALIDAD" Association="Self.FK_AUTOR_NACIONALIDAD">
       <End Role="NACIONALIDAD" EntitySet="NACIONALIDAD" />
       <End Role="AUTOR" EntitySet="AUTOR" />

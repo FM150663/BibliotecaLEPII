@@ -41,6 +41,16 @@
     <Property Name="decNacionalidad" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="AUTORs" Relationship="Self.FK_AUTOR_NACIONALIDAD" FromRole="NACIONALIDAD" ToRole="AUTOR" />
   </EntityType>
+  <EntityType Name="UBICACION">
+    <Key>
+      <PropertyRef Name="idUbicacion" />
+    </Key>
+    <Property Name="idUbicacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idLibro" Type="Int32" Nullable="false" />
+    <Property Name="pasillo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="estante" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="LIBRO" Relationship="Self.FK_UBICACION_LIBRO" FromRole="UBICACION" ToRole="LIBRO" />
+  </EntityType>
   <EntityType Name="usuario">
     <Key>
       <PropertyRef Name="idUsuario" />
@@ -48,17 +58,6 @@
     <Property Name="idUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="usuario1" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="passwd" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
-  </EntityType>
-  <EntityType Name="UBICACION">
-    <Key>
-      <PropertyRef Name="idLibro" />
-      <PropertyRef Name="pasillo" />
-      <PropertyRef Name="estante" />
-    </Key>
-    <Property Name="idLibro" Type="Int32" Nullable="false" />
-    <Property Name="pasillo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="estante" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="LIBRO" Relationship="Self.FK_UBICACION_LIBRO" FromRole="UBICACION" ToRole="LIBRO" />
   </EntityType>
   <Association Name="FK_AUTOR_NACIONALIDAD">
     <End Role="NACIONALIDAD" Type="Self.NACIONALIDAD" Multiplicity="1" />
@@ -113,8 +112,8 @@
     <EntitySet Name="EDITORIALs" EntityType="Self.EDITORIAL" />
     <EntitySet Name="LIBROes" EntityType="Self.LIBRO" />
     <EntitySet Name="NACIONALIDADs" EntityType="Self.NACIONALIDAD" />
-    <EntitySet Name="usuarios" EntityType="Self.usuario" />
     <EntitySet Name="UBICACIONs" EntityType="Self.UBICACION" />
+    <EntitySet Name="usuarios" EntityType="Self.usuario" />
     <AssociationSet Name="FK_AUTOR_NACIONALIDAD" Association="Self.FK_AUTOR_NACIONALIDAD">
       <End Role="NACIONALIDAD" EntitySet="NACIONALIDADs" />
       <End Role="AUTOR" EntitySet="AUTORs" />

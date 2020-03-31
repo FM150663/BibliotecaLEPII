@@ -39,14 +39,11 @@
           <Property Name="idNacionalidad" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="decNacionalidad" Type="nvarchar" MaxLength="80" Nullable="false" />
         </EntityType>
-        <!--Errores durante la generación:
-advertencia 6002: La tabla o vista 'BIBLIOTECALEPII.dbo.UBICACION' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="UBICACION">
           <Key>
-            <PropertyRef Name="idLibro" />
-            <PropertyRef Name="pasillo" />
-            <PropertyRef Name="estante" />
+            <PropertyRef Name="idUbicacion" />
           </Key>
+          <Property Name="idUbicacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="idLibro" Type="int" Nullable="false" />
           <Property Name="pasillo" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="estante" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -123,14 +120,8 @@ advertencia 6002: La tabla o vista 'BIBLIOTECALEPII.dbo.UBICACION' no tiene defi
           <EntitySet Name="EDITORIAL" EntityType="Self.EDITORIAL" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LIBRO" EntityType="Self.LIBRO" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NACIONALIDAD" EntityType="Self.NACIONALIDAD" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UBICACION" EntityType="Self.UBICACION" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="usuario" EntityType="Self.usuario" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="UBICACION" EntityType="Self.UBICACION" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [UBICACION].[idLibro] AS [idLibro], 
-    [UBICACION].[pasillo] AS [pasillo], 
-    [UBICACION].[estante] AS [estante]
-    FROM [dbo].[UBICACION] AS [UBICACION]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK_AUTOR_NACIONALIDAD" Association="Self.FK_AUTOR_NACIONALIDAD">
             <End Role="NACIONALIDAD" EntitySet="NACIONALIDAD" />
             <End Role="AUTOR" EntitySet="AUTOR" />
@@ -193,6 +184,16 @@ advertencia 6002: La tabla o vista 'BIBLIOTECALEPII.dbo.UBICACION' no tiene defi
           <Property Name="decNacionalidad" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="AUTORs" Relationship="Self.FK_AUTOR_NACIONALIDAD" FromRole="NACIONALIDAD" ToRole="AUTOR" />
         </EntityType>
+        <EntityType Name="UBICACION">
+          <Key>
+            <PropertyRef Name="idUbicacion" />
+          </Key>
+          <Property Name="idUbicacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idLibro" Type="Int32" Nullable="false" />
+          <Property Name="pasillo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="estante" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="LIBRO" Relationship="Self.FK_UBICACION_LIBRO" FromRole="UBICACION" ToRole="LIBRO" />
+        </EntityType>
         <EntityType Name="usuario">
           <Key>
             <PropertyRef Name="idUsuario" />
@@ -200,17 +201,6 @@ advertencia 6002: La tabla o vista 'BIBLIOTECALEPII.dbo.UBICACION' no tiene defi
           <Property Name="idUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="usuario1" Type="String" MaxLength="16" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="passwd" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
-        </EntityType>
-        <EntityType Name="UBICACION">
-          <Key>
-            <PropertyRef Name="idLibro" />
-            <PropertyRef Name="pasillo" />
-            <PropertyRef Name="estante" />
-          </Key>
-          <Property Name="idLibro" Type="Int32" Nullable="false" />
-          <Property Name="pasillo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="estante" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="LIBRO" Relationship="Self.FK_UBICACION_LIBRO" FromRole="UBICACION" ToRole="LIBRO" />
         </EntityType>
         <Association Name="FK_AUTOR_NACIONALIDAD">
           <End Role="NACIONALIDAD" Type="Self.NACIONALIDAD" Multiplicity="1" />
@@ -265,8 +255,8 @@ advertencia 6002: La tabla o vista 'BIBLIOTECALEPII.dbo.UBICACION' no tiene defi
           <EntitySet Name="EDITORIALs" EntityType="Self.EDITORIAL" />
           <EntitySet Name="LIBROes" EntityType="Self.LIBRO" />
           <EntitySet Name="NACIONALIDADs" EntityType="Self.NACIONALIDAD" />
-          <EntitySet Name="usuarios" EntityType="Self.usuario" />
           <EntitySet Name="UBICACIONs" EntityType="Self.UBICACION" />
+          <EntitySet Name="usuarios" EntityType="Self.usuario" />
           <AssociationSet Name="FK_AUTOR_NACIONALIDAD" Association="Self.FK_AUTOR_NACIONALIDAD">
             <End Role="NACIONALIDAD" EntitySet="NACIONALIDADs" />
             <End Role="AUTOR" EntitySet="AUTORs" />
@@ -341,21 +331,22 @@ advertencia 6002: La tabla o vista 'BIBLIOTECALEPII.dbo.UBICACION' no tiene defi
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="UBICACIONs">
+            <EntityTypeMapping TypeName="BIBLIOTECALEPIIModel.UBICACION">
+              <MappingFragment StoreEntitySet="UBICACION">
+                <ScalarProperty Name="idUbicacion" ColumnName="idUbicacion" />
+                <ScalarProperty Name="idLibro" ColumnName="idLibro" />
+                <ScalarProperty Name="pasillo" ColumnName="pasillo" />
+                <ScalarProperty Name="estante" ColumnName="estante" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="usuarios">
             <EntityTypeMapping TypeName="BIBLIOTECALEPIIModel.usuario">
               <MappingFragment StoreEntitySet="usuario">
                 <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
                 <ScalarProperty Name="usuario1" ColumnName="usuario" />
                 <ScalarProperty Name="passwd" ColumnName="passwd" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="UBICACIONs">
-            <EntityTypeMapping TypeName="BIBLIOTECALEPIIModel.UBICACION">
-              <MappingFragment StoreEntitySet="UBICACION">
-                <ScalarProperty Name="idLibro" ColumnName="idLibro" />
-                <ScalarProperty Name="pasillo" ColumnName="pasillo" />
-                <ScalarProperty Name="estante" ColumnName="estante" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -145,7 +145,7 @@ namespace Libreria
                                             select x).ToList();
                 if (lista.Count > 0)
                 {
-                    tabla = db.ConvertToDataTable(lista);
+                    tabla = Utilidades.ConvertToDataTable(lista);
                     dataGridView3.DataSource = tabla;
                     dataGridView3.Columns[0].Visible = false;
                     dataGridView3.Columns[1].Visible = false;
@@ -166,7 +166,7 @@ namespace Libreria
                                          select x).ToList();
                 if (lista.Count > 0)
                 {
-                    tabla = db.ConvertToDataTable(lista);
+                    tabla = Utilidades.ConvertToDataTable(lista);
                     dataGridView1.DataSource = tabla;
                     dataGridView1.Columns[0].Visible = false;
                     dataGridView1.Columns[1].Visible = false;
@@ -198,7 +198,7 @@ namespace Libreria
                     
                 if (lista.Count > 0)
                 {
-                    tabla = db.ConvertToDataTable(lista);
+                    tabla = Utilidades.ConvertToDataTable(lista);
                     dataGridView2.DataSource = tabla;
                     dataGridView2.Columns[0].Visible = false;
                     dataGridView2.Columns[1].Visible = false;

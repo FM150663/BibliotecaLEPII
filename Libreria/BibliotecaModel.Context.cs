@@ -14,10 +14,7 @@ namespace Libreria
     using System.Data.Entity.Infrastructure;
     using System.Data.Entity.Core.Objects;
     using System.Linq;
-    using System.Data;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-
+    
     public partial class Contexto : DbContext
     {
         public Contexto()
@@ -34,8 +31,8 @@ namespace Libreria
         public virtual DbSet<EDITORIAL> EDITORIALs { get; set; }
         public virtual DbSet<LIBRO> LIBROes { get; set; }
         public virtual DbSet<NACIONALIDAD> NACIONALIDADs { get; set; }
-        public virtual DbSet<usuario> usuarios { get; set; }
         public virtual DbSet<UBICACION> UBICACIONs { get; set; }
+        public virtual DbSet<usuario> usuarios { get; set; }
     
         public virtual int INSERTAR_USUARIOS(string usu, string pwd)
         {
@@ -61,23 +58,6 @@ namespace Libreria
                 new ObjectParameter("pwd", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<VALIDAR_USUARIO_Result>("VALIDAR_USUARIO", usuParameter, pwdParameter);
-        }
-
-        public DataTable ConvertToDataTable<T>(IList<T> data)
-        {
-            PropertyDescriptorCollection properties = TypeDescriptor.GetProperties(typeof(T));
-            DataTable table = new DataTable();
-            foreach (PropertyDescriptor prop in properties)
-                table.Columns.Add(prop.Name, Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType);
-            foreach (T item in data)
-            {
-                DataRow row = table.NewRow();
-                foreach (PropertyDescriptor prop in properties)
-                    row[prop.Name] = prop.GetValue(item) ?? DBNull.Value;
-                table.Rows.Add(row);
-            }
-            return table;
-
         }
     }
 }

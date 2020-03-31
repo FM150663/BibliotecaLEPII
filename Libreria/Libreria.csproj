@@ -126,6 +126,7 @@
     <Compile Include="usuario.cs">
       <DependentUpon>BibliotecaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Utilidades.cs" />
     <Compile Include="VALIDAR_USUARIO_Result.cs">
       <DependentUpon>BibliotecaModel.tt</DependentUpon>
     </Compile>

@@ -14,6 +14,7 @@ namespace Libreria
     
     public partial class UBICACION
     {
+        public int idUbicacion { get; set; }
         public int idLibro { get; set; }
         public string pasillo { get; set; }
         public string estante { get; set; }

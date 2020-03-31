@@ -39,21 +39,22 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="UBICACIONs">
+      <EntityTypeMapping TypeName="BIBLIOTECALEPIIModel.UBICACION">
+        <MappingFragment StoreEntitySet="UBICACION">
+          <ScalarProperty Name="idUbicacion" ColumnName="idUbicacion" />
+          <ScalarProperty Name="idLibro" ColumnName="idLibro" />
+          <ScalarProperty Name="pasillo" ColumnName="pasillo" />
+          <ScalarProperty Name="estante" ColumnName="estante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="usuarios">
       <EntityTypeMapping TypeName="BIBLIOTECALEPIIModel.usuario">
         <MappingFragment StoreEntitySet="usuario">
           <ScalarProperty Name="idUsuario" ColumnName="idUsuario" />
           <ScalarProperty Name="usuario1" ColumnName="usuario" />
           <ScalarProperty Name="passwd" ColumnName="passwd" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="UBICACIONs">
-      <EntityTypeMapping TypeName="BIBLIOTECALEPIIModel.UBICACION">
-        <MappingFragment StoreEntitySet="UBICACION">
-          <ScalarProperty Name="idLibro" ColumnName="idLibro" />
-          <ScalarProperty Name="pasillo" ColumnName="pasillo" />
-          <ScalarProperty Name="estante" ColumnName="estante" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

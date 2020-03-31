@@ -32,30 +32,33 @@
             this.btnVerRegistros = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNacionalidad = new System.Windows.Forms.TextBox();
+            this.txtTitulo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.cmbNacionalidad = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cboEstante = new System.Windows.Forms.ComboBox();
-            this.cboPasillo = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboAutor = new System.Windows.Forms.ComboBox();
+            this.cboEditorial = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtISBN = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtAnioPublicacion = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.groupBox1.SuspendLayout();
+            this.nupExistencias = new System.Windows.Forms.NumericUpDown();
+            this.txtEstante = new System.Windows.Forms.TextBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.txtPasillo = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupExistencias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // lblRegresar
@@ -79,9 +82,10 @@
             this.btnVerRegistros.Location = new System.Drawing.Point(903, 551);
             this.btnVerRegistros.Name = "btnVerRegistros";
             this.btnVerRegistros.Size = new System.Drawing.Size(161, 45);
-            this.btnVerRegistros.TabIndex = 14;
+            this.btnVerRegistros.TabIndex = 21;
             this.btnVerRegistros.Text = "Ver registros";
             this.btnVerRegistros.UseVisualStyleBackColor = false;
+            this.btnVerRegistros.Click += new System.EventHandler(this.btnVerRegistros_Click);
             // 
             // btnAgregar
             // 
@@ -92,9 +96,10 @@
             this.btnAgregar.Location = new System.Drawing.Point(903, 474);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(161, 45);
-            this.btnAgregar.TabIndex = 13;
+            this.btnAgregar.TabIndex = 20;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label1
             // 
@@ -107,16 +112,16 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Título:";
             // 
-            // txtNacionalidad
+            // txtTitulo
             // 
-            this.txtNacionalidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
-            this.txtNacionalidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNacionalidad.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNacionalidad.ForeColor = System.Drawing.Color.White;
-            this.txtNacionalidad.Location = new System.Drawing.Point(60, 182);
-            this.txtNacionalidad.Name = "txtNacionalidad";
-            this.txtNacionalidad.Size = new System.Drawing.Size(282, 25);
-            this.txtNacionalidad.TabIndex = 11;
+            this.txtTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
+            this.txtTitulo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTitulo.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitulo.ForeColor = System.Drawing.Color.White;
+            this.txtTitulo.Location = new System.Drawing.Point(60, 182);
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.Size = new System.Drawing.Size(282, 25);
+            this.txtTitulo.TabIndex = 1;
             // 
             // label2
             // 
@@ -173,89 +178,29 @@
             this.label7.TabIndex = 20;
             this.label7.Text = "Autor:";
             // 
-            // cmbNacionalidad
+            // cboAutor
             // 
-            this.cmbNacionalidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
-            this.cmbNacionalidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbNacionalidad.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.cmbNacionalidad.ForeColor = System.Drawing.Color.White;
-            this.cmbNacionalidad.FormattingEnabled = true;
-            this.cmbNacionalidad.Location = new System.Drawing.Point(397, 183);
-            this.cmbNacionalidad.Name = "cmbNacionalidad";
-            this.cmbNacionalidad.Size = new System.Drawing.Size(282, 33);
-            this.cmbNacionalidad.TabIndex = 25;
+            this.cboAutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
+            this.cboAutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboAutor.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.cboAutor.ForeColor = System.Drawing.Color.White;
+            this.cboAutor.FormattingEnabled = true;
+            this.cboAutor.Location = new System.Drawing.Point(397, 183);
+            this.cboAutor.Name = "cboAutor";
+            this.cboAutor.Size = new System.Drawing.Size(282, 33);
+            this.cboAutor.TabIndex = 4;
             // 
-            // comboBox1
+            // cboEditorial
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(397, 311);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(282, 33);
-            this.comboBox1.TabIndex = 26;
-            // 
-            // cboEstante
-            // 
-            this.cboEstante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
-            this.cboEstante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboEstante.ForeColor = System.Drawing.Color.White;
-            this.cboEstante.FormattingEnabled = true;
-            this.cboEstante.Location = new System.Drawing.Point(21, 200);
-            this.cboEstante.Name = "cboEstante";
-            this.cboEstante.Size = new System.Drawing.Size(282, 33);
-            this.cboEstante.TabIndex = 30;
-            // 
-            // cboPasillo
-            // 
-            this.cboPasillo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
-            this.cboPasillo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboPasillo.ForeColor = System.Drawing.Color.White;
-            this.cboPasillo.FormattingEnabled = true;
-            this.cboPasillo.Location = new System.Drawing.Point(21, 73);
-            this.cboPasillo.Name = "cboPasillo";
-            this.cboPasillo.Size = new System.Drawing.Size(282, 33);
-            this.cboPasillo.TabIndex = 29;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(17, 160);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(78, 28);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "Estante:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(17, 33);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 28);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "Pasillo:";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.cboEstante);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.cboPasillo);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(735, 147);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(329, 269);
-            this.groupBox1.TabIndex = 31;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Ubicación:";
+            this.cboEditorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
+            this.cboEditorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboEditorial.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.cboEditorial.ForeColor = System.Drawing.Color.White;
+            this.cboEditorial.FormattingEnabled = true;
+            this.cboEditorial.Location = new System.Drawing.Point(397, 311);
+            this.cboEditorial.Name = "cboEditorial";
+            this.cboEditorial.Size = new System.Drawing.Size(282, 33);
+            this.cboEditorial.TabIndex = 5;
             // 
             // pictureBox1
             // 
@@ -275,7 +220,8 @@
             this.txtISBN.Location = new System.Drawing.Point(60, 334);
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.Size = new System.Drawing.Size(282, 25);
-            this.txtISBN.TabIndex = 33;
+            this.txtISBN.TabIndex = 2;
+            this.txtISBN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtISBN_KeyPress);
             // 
             // pictureBox2
             // 
@@ -295,7 +241,8 @@
             this.txtAnioPublicacion.Location = new System.Drawing.Point(60, 474);
             this.txtAnioPublicacion.Name = "txtAnioPublicacion";
             this.txtAnioPublicacion.Size = new System.Drawing.Size(282, 25);
-            this.txtAnioPublicacion.TabIndex = 35;
+            this.txtAnioPublicacion.TabIndex = 3;
+            this.txtAnioPublicacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAnioPublicacion_KeyPress);
             // 
             // pictureBox3
             // 
@@ -306,15 +253,107 @@
             this.pictureBox3.TabIndex = 36;
             this.pictureBox3.TabStop = false;
             // 
-            // numericUpDown1
+            // nupExistencias
             // 
-            this.numericUpDown1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft YaHei", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.ForeColor = System.Drawing.Color.White;
-            this.numericUpDown1.Location = new System.Drawing.Point(398, 466);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(281, 33);
-            this.numericUpDown1.TabIndex = 37;
+            this.nupExistencias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
+            this.nupExistencias.Font = new System.Drawing.Font("Microsoft YaHei", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nupExistencias.ForeColor = System.Drawing.Color.White;
+            this.nupExistencias.Location = new System.Drawing.Point(398, 466);
+            this.nupExistencias.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.nupExistencias.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nupExistencias.Name = "nupExistencias";
+            this.nupExistencias.Size = new System.Drawing.Size(281, 33);
+            this.nupExistencias.TabIndex = 6;
+            this.nupExistencias.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nupExistencias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nupExistencias_KeyPress);
+            // 
+            // txtEstante
+            // 
+            this.txtEstante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
+            this.txtEstante.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEstante.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstante.ForeColor = System.Drawing.Color.White;
+            this.txtEstante.Location = new System.Drawing.Point(785, 357);
+            this.txtEstante.Name = "txtEstante";
+            this.txtEstante.Size = new System.Drawing.Size(282, 25);
+            this.txtEstante.TabIndex = 8;
+            this.txtEstante.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEstante_KeyPress_1);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.White;
+            this.pictureBox5.Location = new System.Drawing.Point(785, 357);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(282, 27);
+            this.pictureBox5.TabIndex = 42;
+            this.pictureBox5.TabStop = false;
+            // 
+            // txtPasillo
+            // 
+            this.txtPasillo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
+            this.txtPasillo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPasillo.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasillo.ForeColor = System.Drawing.Color.White;
+            this.txtPasillo.Location = new System.Drawing.Point(785, 242);
+            this.txtPasillo.Name = "txtPasillo";
+            this.txtPasillo.Size = new System.Drawing.Size(282, 25);
+            this.txtPasillo.TabIndex = 7;
+            this.txtPasillo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPasillo_KeyPress_1);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.Location = new System.Drawing.Point(785, 242);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(282, 27);
+            this.pictureBox4.TabIndex = 41;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(780, 315);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(78, 28);
+            this.label8.TabIndex = 40;
+            this.label8.Text = "Estante:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(780, 188);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 28);
+            this.label9.TabIndex = 39;
+            this.label9.Text = "Pasillo:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(780, 147);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(97, 28);
+            this.label5.TabIndex = 43;
+            this.label5.Text = "Ubicación";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LibrosF
             // 
@@ -322,14 +361,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(1117, 633);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtEstante);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.txtPasillo);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.nupExistencias);
             this.Controls.Add(this.txtAnioPublicacion);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtISBN);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.cmbNacionalidad);
+            this.Controls.Add(this.cboEditorial);
+            this.Controls.Add(this.cboAutor);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
@@ -338,7 +383,7 @@
             this.Controls.Add(this.btnVerRegistros);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtNacionalidad);
+            this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.lblRegresar);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -346,12 +391,12 @@
             this.Name = "LibrosF";
             this.Text = "Libros";
             this.Load += new System.EventHandler(this.LibrosF_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupExistencias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -363,24 +408,26 @@
         private System.Windows.Forms.Button btnVerRegistros;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNacionalidad;
+        private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cmbNacionalidad;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox cboEstante;
-        private System.Windows.Forms.ComboBox cboPasillo;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox cboAutor;
+        private System.Windows.Forms.ComboBox cboEditorial;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtISBN;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox txtAnioPublicacion;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nupExistencias;
+        private System.Windows.Forms.TextBox txtEstante;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.TextBox txtPasillo;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label5;
     }
 }

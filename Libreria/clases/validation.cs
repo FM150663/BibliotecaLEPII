@@ -24,7 +24,7 @@ namespace Libreria
                 else
                 {
                     e.Handled = true;
-                    MessageBox.Show("Solo letras, sin espacios", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Solo letras, sin espacios", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -40,9 +40,9 @@ namespace Libreria
                 if (Char.IsSeparator(e.KeyChar))//lo unico que no permite son espacios
                 {
                     e.Handled = true;// por eso es true y no false
-                    MessageBox.Show("No se permiten espacios", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No se permiten espacios", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else //todo lo demas si lo permite wuuu
+                else 
                 {
                     e.Handled = false;
                 }
@@ -69,8 +69,7 @@ namespace Libreria
                 else
                 {
                     e.Handled = true;
-                    //pueden cambiar el mensaje si quieren pero el mio esta mas chido jiji
-                    MessageBox.Show("Sólo se permiten letras", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Sólo se permiten letras", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -99,10 +98,10 @@ namespace Libreria
                 {
                     e.Handled = true;
                 }
-                else// alv todo lo demas que no sea eso 
+                else
                 {
                     e.Handled = true;
-                    MessageBox.Show("Solo se permiten números", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Solo se permiten números", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -111,7 +110,7 @@ namespace Libreria
             }
         }
 
-        public void letrasNumerosGuiones(KeyPressEventArgs e)
+        public void letrasNumeros(KeyPressEventArgs e)
         {
             try
             {
@@ -121,20 +120,43 @@ namespace Libreria
                 }
                 else if (Char.IsControl(e.KeyChar))
                 {
-                    e.Handled = true;
+                    e.Handled = false;
                 }
                 else if (Char.IsNumber(e.KeyChar))
                 {
-                    e.Handled = true;
+                    e.Handled = false;
                 }
-                else if (e.KeyChar == '-')//permite guiones
+                else
                 {
                     e.Handled = true;
+                    MessageBox.Show("Solo se permiten digitos, numeros o Guiones", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                else// alv todo lo demas que no sea eso 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+        public void numerosGuiones(KeyPressEventArgs e)
+        {
+            try
+            {
+                if (Char.IsNumber(e.KeyChar)) 
+                {
+                    e.Handled = false;
+                }
+                else if (Char.IsControl(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else if (e.KeyChar == '-')
+                {
+                    e.Handled = false;
+                }
+                else
                 {
                     e.Handled = true;
-                    MessageBox.Show("Solo se permiten digitos, numeros o Guiones", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Solo se permiten digitos o guiones ", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -163,13 +185,13 @@ namespace Libreria
             }
         }
 
-        public static bool validarDUI(String email) //método para validar el email ingresado 
+        public static bool validarDUI(String DUI) //método para validar el email ingresado 
         {
             String expresion;
             expresion = "^\\d{8}-\\d$";
-            if (Regex.IsMatch(email, expresion)) //Indica si la expresión regular especificada encuentra una coincidencia en la cadena de entrada especificada
+            if (Regex.IsMatch(DUI, expresion)) //Indica si la expresión regular especificada encuentra una coincidencia en la cadena de entrada especificada
             {
-                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                if (Regex.Replace(DUI, expresion, String.Empty).Length == 0)
                 {
                     return true;
                 }
@@ -197,6 +219,41 @@ namespace Libreria
                 {
                     return false;
                 }
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static bool validarISBN(String ISBN) //método para validar el ISBN 
+        {
+            String expresion;
+            expresion = @"\d{1,5}([- ])\d{1,7}\1\d{1,6}\1(\d|X)";
+            if (Regex.IsMatch(ISBN, expresion)) //Indica si la expresión regular especificada encuentra una coincidencia en la cadena de entrada especificada
+            {
+                if (Regex.Replace(ISBN, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public static bool validarAnio(string anio) //método para validar el ISBN 
+        {
+            int Anio ;
+            if(!int.TryParse(anio,out Anio))
+            {
+                return false;
+            }
+            if (Anio>-1 && Anio<= DateTime.Now.Year) { 
+                    return true;
             }
             else
             {

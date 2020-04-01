@@ -42,7 +42,7 @@
     <EntitySetMapping Name="UBICACIONs">
       <EntityTypeMapping TypeName="BIBLIOTECALEPIIModel.UBICACION">
         <MappingFragment StoreEntitySet="UBICACION">
-          <ScalarProperty Name="idUbicacion" ColumnName="idUbicacion" />
+          <ScalarProperty Name="idUbicacion1" ColumnName="idUbicacion" />
           <ScalarProperty Name="idLibro" ColumnName="idLibro" />
           <ScalarProperty Name="pasillo" ColumnName="pasillo" />
           <ScalarProperty Name="estante" ColumnName="estante" />

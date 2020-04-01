@@ -127,10 +127,10 @@
       <DependentUpon>BibliotecaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Utilidades.cs" />
+    <Compile Include="clases\validation.cs" />
     <Compile Include="VALIDAR_USUARIO_Result.cs">
       <DependentUpon>BibliotecaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="clases\validation.cs" />
     <Compile Include="VerLibrosF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,13 +193,13 @@
     <Content Include="bdd.sql" />
     <Content Include="BibliotecaModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BibliotecaModel.edmx</DependentUpon>
       <LastGenOutput>BibliotecaModel.Context.cs</LastGenOutput>
+      <DependentUpon>BibliotecaModel.edmx</DependentUpon>
     </Content>
     <Content Include="BibliotecaModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>BibliotecaModel.edmx</DependentUpon>
       <LastGenOutput>BibliotecaModel.cs</LastGenOutput>
+      <DependentUpon>BibliotecaModel.edmx</DependentUpon>
     </Content>
     <Content Include="libros.jpg" />
     <Content Include="libros2.jpg" />

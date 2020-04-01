@@ -44,12 +44,14 @@
   <EntityType Name="UBICACION">
     <Key>
       <PropertyRef Name="idUbicacion" />
+      <PropertyRef Name="idUbicacion1" />
     </Key>
     <Property Name="idUbicacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="idLibro" Type="Int32" Nullable="false" />
     <Property Name="pasillo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="estante" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="LIBRO" Relationship="Self.FK_UBICACION_LIBRO" FromRole="UBICACION" ToRole="LIBRO" />
+    <Property Name="idUbicacion1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="usuario">
     <Key>

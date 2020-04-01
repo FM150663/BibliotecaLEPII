@@ -41,17 +41,25 @@
     <Property Name="decNacionalidad" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="AUTORs" Relationship="Self.FK_AUTOR_NACIONALIDAD" FromRole="NACIONALIDAD" ToRole="AUTOR" />
   </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
   <EntityType Name="UBICACION">
     <Key>
       <PropertyRef Name="idUbicacion" />
-      <PropertyRef Name="idUbicacion1" />
     </Key>
     <Property Name="idUbicacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="idLibro" Type="Int32" Nullable="false" />
     <Property Name="pasillo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="estante" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="LIBRO" Relationship="Self.FK_UBICACION_LIBRO" FromRole="UBICACION" ToRole="LIBRO" />
-    <Property Name="idUbicacion1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
   </EntityType>
   <EntityType Name="usuario">
     <Key>
@@ -109,11 +117,12 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Contexto" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="contexto" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="AUTORs" EntityType="Self.AUTOR" />
     <EntitySet Name="EDITORIALs" EntityType="Self.EDITORIAL" />
     <EntitySet Name="LIBROes" EntityType="Self.LIBRO" />
     <EntitySet Name="NACIONALIDADs" EntityType="Self.NACIONALIDAD" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="UBICACIONs" EntityType="Self.UBICACION" />
     <EntitySet Name="usuarios" EntityType="Self.usuario" />
     <AssociationSet Name="FK_AUTOR_NACIONALIDAD" Association="Self.FK_AUTOR_NACIONALIDAD">
@@ -136,11 +145,52 @@
       <Parameter Name="usu" Mode="In" Type="String" />
       <Parameter Name="pwd" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(BIBLIOTECALEPIIModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(BIBLIOTECALEPIIModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
     <FunctionImport Name="VALIDAR_USUARIO" ReturnType="Collection(BIBLIOTECALEPIIModel.VALIDAR_USUARIO_Result)">
       <Parameter Name="usu" Mode="In" Type="String" />
       <Parameter Name="pwd" Mode="In" Type="String" />
     </FunctionImport>
   </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
   <ComplexType Name="VALIDAR_USUARIO_Result">
     <Property Type="Int32" Name="idUsuario" Nullable="false" />
     <Property Type="String" Name="usuario" Nullable="false" MaxLength="16" />

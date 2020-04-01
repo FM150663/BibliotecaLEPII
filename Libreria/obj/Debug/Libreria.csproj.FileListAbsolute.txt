@@ -67,3 +67,4 @@ C:\Users\david\Documents\PED104\BibliotecaLEPII\Libreria\bin\Debug\EntityFramewo
 C:\Users\david\Documents\PED104\BibliotecaLEPII\Libreria\bin\Debug\EntityFramework.xml
 C:\Users\david\Documents\PED104\BibliotecaLEPII\Libreria\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\david\Documents\PED104\BibliotecaLEPII\Libreria\obj\Debug\Libreria.csproj.CopyComplete
+C:\Users\david\Documents\PED104\BibliotecaLEPII\Libreria\obj\Debug\Libreria.csproj.CoreCompileInputs.cache

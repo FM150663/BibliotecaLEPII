@@ -43,7 +43,7 @@ namespace Libreria
         {
             if(btnAgregarNacionalidad.Text == "Agregar")
             {
-                using (Contexto db = new Contexto())
+                using (contexto db = new contexto())
                 {
                     NACIONALIDAD nuevaNacionalidad = new NACIONALIDAD();
                     nuevaNacionalidad.decNacionalidad = txtNacionalidad.Text;
@@ -57,7 +57,7 @@ namespace Libreria
             {
                 if (idNacionalidad != 0)
                 {
-                    using (Contexto db = new Contexto())
+                    using (contexto db = new contexto())
                     {
                         NACIONALIDAD nacionalidadMod = db.NACIONALIDADs.Find(idNacionalidad);
                         nacionalidadMod.decNacionalidad = txtNacionalidad.Text;
@@ -75,7 +75,7 @@ namespace Libreria
         {
             if (btnAgregarEditorial.Text == "Agregar")
             {
-                using (Contexto db = new Contexto())
+                using (contexto db = new contexto())
                 {
                     EDITORIAL nuevaEditorial = new EDITORIAL();
                     nuevaEditorial.descEditorial = txtEditorial.Text;
@@ -89,7 +89,7 @@ namespace Libreria
             {
                 if (idEditorial != 0)
                 {
-                    using (Contexto db = new Contexto())
+                    using (contexto db = new contexto())
                     {
                         EDITORIAL editorialMod = db.EDITORIALs.Find(idEditorial);
                         editorialMod.descEditorial = txtEditorial.Text;
@@ -107,7 +107,7 @@ namespace Libreria
         {
             if (btnAgregarAutor.Text == "Agregar")
             {
-                using (Contexto db = new Contexto())
+                using (contexto db = new contexto())
                 {
                     AUTOR nuevoAutor = new AUTOR();
                     nuevoAutor.nombreAutor = txtAutor.Text;
@@ -122,7 +122,7 @@ namespace Libreria
             {
                 if (idAutor != 0)
                 {
-                    using (Contexto db = new Contexto())
+                    using (contexto db = new contexto())
                     {
                         AUTOR autorMod = db.AUTORs.Find(idAutor);
                         autorMod.nombreAutor = txtAutor.Text;
@@ -138,7 +138,7 @@ namespace Libreria
         }
         private void cargarEnTabla()
         {
-            using(Contexto db = new Contexto())
+            using(contexto db = new contexto())
             {
                 DataTable tabla = new DataTable();
                 List<NACIONALIDAD> lista = (from x in db.NACIONALIDADs
@@ -159,7 +159,7 @@ namespace Libreria
 
         private void cargarTablaEditoriales()
         {
-            using (Contexto db = new Contexto())
+            using (contexto db = new contexto())
             {
                 DataTable tabla = new DataTable();
                 List<EDITORIAL> lista = (from x in db.EDITORIALs
@@ -180,7 +180,7 @@ namespace Libreria
 
         private void cargarTablaAutores()
         {
-            using (Contexto db = new Contexto())
+            using (contexto db = new contexto())
             {
                 DataTable tabla = new DataTable();
                 var lista = db.NACIONALIDADs.Join(
@@ -258,7 +258,7 @@ namespace Libreria
         {
             if (idNacionalidad != 0)
             {
-                using (Contexto db = new Contexto())
+                using (contexto db = new contexto())
                 {
                     NACIONALIDAD nacionalidadDel = db.NACIONALIDADs.Find(idNacionalidad);
 
@@ -274,7 +274,7 @@ namespace Libreria
         {
             if (idEditorial != 0)
             {
-                using (Contexto db = new Contexto())
+                using (contexto db = new contexto())
                 {
                     EDITORIAL editorialDel = db.EDITORIALs.Find(idEditorial);
 
@@ -290,7 +290,7 @@ namespace Libreria
         {
             if (idAutor != 0)
             {
-                using (Contexto db = new Contexto())
+                using (contexto db = new contexto())
                 {
                     AUTOR autorDel = db.AUTORs.Find(idAutor);
 
@@ -329,7 +329,7 @@ namespace Libreria
 
         private void tabAutor_Enter(object sender, EventArgs e)
         {
-            using (Contexto db = new Contexto())
+            using (contexto db = new contexto())
             {
                 DataTable tabla = new DataTable();
                 List<NACIONALIDAD> lista = (from x in db.NACIONALIDADs

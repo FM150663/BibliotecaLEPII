@@ -35,7 +35,7 @@ namespace Libreria
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            using (Contexto db = new Contexto())
+            using (contexto db = new contexto())
             {
                 List<Libreria.VALIDAR_USUARIO_Result> lista = new List<Libreria.VALIDAR_USUARIO_Result>();
                 lista = db.VALIDAR_USUARIO(txtUsuario.Text, txtPassword.Text).ToList();

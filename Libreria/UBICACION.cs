@@ -18,7 +18,6 @@ namespace Libreria
         public int idLibro { get; set; }
         public string pasillo { get; set; }
         public string estante { get; set; }
-        public int idUbicacion1 { get; set; }
     
         public virtual LIBRO LIBRO { get; set; }
     }

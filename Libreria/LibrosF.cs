@@ -35,7 +35,7 @@ namespace Libreria
 
         private void cargarTablas()
         {
-            using (Contexto db = new Contexto())
+            using (contexto db = new contexto())
             {
                 //Llenando editoriales
                 List<EDITORIAL> lista = (from x in db.EDITORIALs
@@ -87,7 +87,7 @@ namespace Libreria
                     }
                     if (bandera)
                     {
-                        using (Contexto db = new Contexto())
+                        using (contexto db = new contexto())
                         {
 
 

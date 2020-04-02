@@ -35,7 +35,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvLibros = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtTituloLibro = new System.Windows.Forms.TextBox();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nacionalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +44,7 @@
             this.Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pasillo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdLibro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -73,6 +74,7 @@
             this.btnAgregar.TabIndex = 15;
             this.btnAgregar.Text = "Buscar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // dgvLibros
             // 
@@ -97,7 +99,8 @@
             this.Autor,
             this.Editorial,
             this.Pasillo,
-            this.Estante});
+            this.Estante,
+            this.IdLibro});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Malgun Gothic Semilight", 10F);
@@ -124,6 +127,7 @@
             this.dgvLibros.RowTemplate.Height = 24;
             this.dgvLibros.Size = new System.Drawing.Size(1316, 381);
             this.dgvLibros.TabIndex = 16;
+            this.dgvLibros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLibros_CellClick);
             // 
             // label5
             // 
@@ -137,16 +141,16 @@
             this.label5.Text = "< REGRESAR";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // txtTituloLibro
+            // txtBuscar
             // 
-            this.txtTituloLibro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
-            this.txtTituloLibro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTituloLibro.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTituloLibro.ForeColor = System.Drawing.Color.White;
-            this.txtTituloLibro.Location = new System.Drawing.Point(223, 84);
-            this.txtTituloLibro.Name = "txtTituloLibro";
-            this.txtTituloLibro.Size = new System.Drawing.Size(486, 25);
-            this.txtTituloLibro.TabIndex = 33;
+            this.txtBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
+            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.ForeColor = System.Drawing.Color.White;
+            this.txtBuscar.Location = new System.Drawing.Point(223, 84);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(486, 25);
+            this.txtBuscar.TabIndex = 33;
             // 
             // pictureBox1
             // 
@@ -207,13 +211,21 @@
             this.Estante.Name = "Estante";
             this.Estante.ReadOnly = true;
             // 
+            // IdLibro
+            // 
+            this.IdLibro.HeaderText = "IdLibro";
+            this.IdLibro.MinimumWidth = 6;
+            this.IdLibro.Name = "IdLibro";
+            this.IdLibro.ReadOnly = true;
+            this.IdLibro.Visible = false;
+            // 
             // VerLibrosF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(1355, 603);
-            this.Controls.Add(this.txtTituloLibro);
+            this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dgvLibros);
@@ -237,7 +249,7 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dgvLibros;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtTituloLibro;
+        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nacionalidad;
@@ -246,5 +258,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Editorial;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pasillo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdLibro;
     }
 }

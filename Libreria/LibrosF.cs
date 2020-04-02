@@ -13,10 +13,64 @@ namespace Libreria
     public partial class LibrosF : Form
     {
         validation valid = new validation();//Clase validacion
+        public struct cboItem{
+            public string Text { get; set; }
+            public string Value { get; set; }
+
+        }
 
         public LibrosF()
         {
             InitializeComponent();
+            List<string> Pasillos = new List<string>();
+            Pasillos.Add("P1");
+            Pasillos.Add("P2");
+            Pasillos.Add("P3");
+            Pasillos.Add("P4");
+            Pasillos.Add("P5");
+            cboPasillo.DisplayMember = "Text";
+            cboPasillo.ValueMember = "Value";
+            foreach (var pasillo in Pasillos)
+            {
+            cboPasillo.Items.Add(new cboItem { Text = pasillo, Value = pasillo });
+
+            }
+            cboPasillo.SelectedIndex = 0;
+
+            List<string> Estantes = new List<string>();
+            Estantes.Add("E1");
+            Estantes.Add("E2");
+            Estantes.Add("E3");
+            Estantes.Add("E4");
+            Estantes.Add("E5");
+            Estantes.Add("E6");
+            Estantes.Add("E7");
+            Estantes.Add("E8");
+            Estantes.Add("E9");
+            Estantes.Add("E10");
+            Estantes.Add("E11");
+            Estantes.Add("E12");
+            Estantes.Add("E13");
+            Estantes.Add("E14");
+            Estantes.Add("E15");
+            Estantes.Add("E16");
+            Estantes.Add("E17");
+            Estantes.Add("E18");
+            Estantes.Add("E19");
+            Estantes.Add("E20");
+            Estantes.Add("E21");
+            Estantes.Add("E22");
+            Estantes.Add("E23");
+            Estantes.Add("E24");
+            cboEstante.DisplayMember = "Text";
+            cboEstante.ValueMember = "Value";
+            foreach (var estante in Estantes)
+            {
+                cboEstante.Items.Add(new cboItem { Text = estante, Value = estante });
+
+            }
+            cboEstante.SelectedIndex = 0;
+
         }
 
         private void LibrosF_Load(object sender, EventArgs e)
@@ -68,9 +122,7 @@ namespace Libreria
             try
             {
                 if (string.IsNullOrEmpty(txtAnioPublicacion.Text) ||
-                    string.IsNullOrEmpty(txtEstante.Text) ||
                     string.IsNullOrEmpty(txtISBN.Text) ||
-                    string.IsNullOrEmpty(txtPasillo.Text) ||
                     string.IsNullOrEmpty(txtTitulo.Text) ||
                     nupExistencias.Value <1 )
                 {
@@ -105,14 +157,16 @@ namespace Libreria
                             {
                                 UBICACION newUbicacion = new UBICACION();
                                 newUbicacion.idLibro = newlibro.idLibro;
-                                newUbicacion.pasillo = txtPasillo.Text;
-                                newUbicacion.estante = txtEstante.Text;
+                                newUbicacion.pasillo =  ((cboItem) cboPasillo.SelectedItem).Value;
+                               newUbicacion.estante = ((cboItem)cboEstante.SelectedItem).Value;
                                 db.UBICACIONs.Add(newUbicacion);
                                 i = db.SaveChanges();
                             }
                             if(i>0)
                             MessageBox.Show("Libro ingresado exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                            VerLibrosF n = new VerLibrosF();
+                            n.Show();
+                            this.Hide();
                         }
                     }
 

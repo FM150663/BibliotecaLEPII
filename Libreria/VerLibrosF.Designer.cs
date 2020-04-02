@@ -32,13 +32,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNacionalidad = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvLibros = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtTituloLibro = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nacionalidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.Publicación = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pasillo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -52,19 +59,6 @@
             this.label1.Size = new System.Drawing.Size(73, 28);
             this.label1.TabIndex = 14;
             this.label1.Text = "Buscar:";
-            // 
-            // txtNacionalidad
-            // 
-            this.txtNacionalidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
-            this.txtNacionalidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNacionalidad.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNacionalidad.ForeColor = System.Drawing.Color.White;
-            this.txtNacionalidad.Location = new System.Drawing.Point(236, 79);
-            this.txtNacionalidad.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtNacionalidad.Name = "txtNacionalidad";
-            this.txtNacionalidad.Size = new System.Drawing.Size(428, 25);
-            this.txtNacionalidad.TabIndex = 13;
-            this.txtNacionalidad.Text = "__________________________________________________________";
             // 
             // btnAgregar
             // 
@@ -80,13 +74,13 @@
             this.btnAgregar.Text = "Buscar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             // 
-            // dataGridView2
+            // dgvLibros
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(136)))), ((int)(((byte)(138)))));
-            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.dgvLibros.AllowUserToAddRows = false;
+            this.dgvLibros.AllowUserToDeleteRows = false;
+            this.dgvLibros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvLibros.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(136)))), ((int)(((byte)(138)))));
+            this.dgvLibros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Malgun Gothic Semilight", 10F);
@@ -94,11 +88,16 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvLibros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvLibros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLibros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
-            this.Nacionalidad});
+            this.Nacionalidad,
+            this.Publicación,
+            this.Autor,
+            this.Editorial,
+            this.Pasillo,
+            this.Estante});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Malgun Gothic Semilight", 10F);
@@ -106,12 +105,12 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.dataGridView2.Location = new System.Drawing.Point(81, 164);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
+            this.dgvLibros.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvLibros.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.dgvLibros.Location = new System.Drawing.Point(13, 164);
+            this.dgvLibros.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dgvLibros.Name = "dgvLibros";
+            this.dgvLibros.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Malgun Gothic Semilight", 10F);
@@ -119,27 +118,12 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(878, 381);
-            this.dataGridView2.TabIndex = 16;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Nacionalidad
-            // 
-            this.Nacionalidad.HeaderText = "Nacionalidad";
-            this.Nacionalidad.MinimumWidth = 6;
-            this.Nacionalidad.Name = "Nacionalidad";
-            this.Nacionalidad.ReadOnly = true;
+            this.dgvLibros.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvLibros.RowHeadersWidth = 51;
+            this.dgvLibros.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvLibros.RowTemplate.Height = 24;
+            this.dgvLibros.Size = new System.Drawing.Size(1316, 381);
+            this.dgvLibros.TabIndex = 16;
             // 
             // label5
             // 
@@ -153,23 +137,95 @@
             this.label5.Text = "< REGRESAR";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
+            // txtTituloLibro
+            // 
+            this.txtTituloLibro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
+            this.txtTituloLibro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTituloLibro.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTituloLibro.ForeColor = System.Drawing.Color.White;
+            this.txtTituloLibro.Location = new System.Drawing.Point(223, 84);
+            this.txtTituloLibro.Name = "txtTituloLibro";
+            this.txtTituloLibro.Size = new System.Drawing.Size(486, 25);
+            this.txtTituloLibro.TabIndex = 33;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Location = new System.Drawing.Point(223, 84);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(486, 27);
+            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Titulo";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Nacionalidad
+            // 
+            this.Nacionalidad.HeaderText = "ISBN";
+            this.Nacionalidad.MinimumWidth = 6;
+            this.Nacionalidad.Name = "Nacionalidad";
+            this.Nacionalidad.ReadOnly = true;
+            // 
+            // Publicación
+            // 
+            this.Publicación.HeaderText = "Publicación";
+            this.Publicación.MinimumWidth = 6;
+            this.Publicación.Name = "Publicación";
+            this.Publicación.ReadOnly = true;
+            // 
+            // Autor
+            // 
+            this.Autor.HeaderText = "Autor";
+            this.Autor.MinimumWidth = 6;
+            this.Autor.Name = "Autor";
+            this.Autor.ReadOnly = true;
+            // 
+            // Editorial
+            // 
+            this.Editorial.HeaderText = "Editorial";
+            this.Editorial.MinimumWidth = 6;
+            this.Editorial.Name = "Editorial";
+            this.Editorial.ReadOnly = true;
+            // 
+            // Pasillo
+            // 
+            this.Pasillo.HeaderText = "Pasillo";
+            this.Pasillo.MinimumWidth = 6;
+            this.Pasillo.Name = "Pasillo";
+            this.Pasillo.ReadOnly = true;
+            // 
+            // Estante
+            // 
+            this.Estante.HeaderText = "Estante";
+            this.Estante.MinimumWidth = 6;
+            this.Estante.Name = "Estante";
+            this.Estante.ReadOnly = true;
+            // 
             // VerLibrosF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
-            this.ClientSize = new System.Drawing.Size(1052, 603);
+            this.ClientSize = new System.Drawing.Size(1355, 603);
+            this.Controls.Add(this.txtTituloLibro);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dgvLibros);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtNacionalidad);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.Name = "VerLibrosF";
             this.Load += new System.EventHandler(this.VerLibrosF_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLibros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,11 +234,17 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNacionalidad;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvLibros;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtTituloLibro;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nacionalidad;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Publicación;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Editorial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pasillo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estante;
     }
 }

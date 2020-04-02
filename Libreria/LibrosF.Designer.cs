@@ -46,19 +46,15 @@
             this.txtAnioPublicacion = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.nupExistencias = new System.Windows.Forms.NumericUpDown();
-            this.txtEstante = new System.Windows.Forms.TextBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.txtPasillo = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.cboPasillo = new System.Windows.Forms.ComboBox();
+            this.cboEstante = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupExistencias)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // lblRegresar
@@ -279,48 +275,6 @@
             0});
             this.nupExistencias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nupExistencias_KeyPress);
             // 
-            // txtEstante
-            // 
-            this.txtEstante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
-            this.txtEstante.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEstante.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstante.ForeColor = System.Drawing.Color.White;
-            this.txtEstante.Location = new System.Drawing.Point(785, 357);
-            this.txtEstante.Name = "txtEstante";
-            this.txtEstante.Size = new System.Drawing.Size(282, 25);
-            this.txtEstante.TabIndex = 8;
-            this.txtEstante.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEstante_KeyPress_1);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.White;
-            this.pictureBox5.Location = new System.Drawing.Point(785, 357);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(282, 27);
-            this.pictureBox5.TabIndex = 42;
-            this.pictureBox5.TabStop = false;
-            // 
-            // txtPasillo
-            // 
-            this.txtPasillo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
-            this.txtPasillo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPasillo.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.89565F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPasillo.ForeColor = System.Drawing.Color.White;
-            this.txtPasillo.Location = new System.Drawing.Point(785, 242);
-            this.txtPasillo.Name = "txtPasillo";
-            this.txtPasillo.Size = new System.Drawing.Size(282, 25);
-            this.txtPasillo.TabIndex = 7;
-            this.txtPasillo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPasillo_KeyPress_1);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Location = new System.Drawing.Point(785, 242);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(282, 27);
-            this.pictureBox4.TabIndex = 41;
-            this.pictureBox4.TabStop = false;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -355,17 +309,39 @@
             this.label5.Text = "Ubicación";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cboPasillo
+            // 
+            this.cboPasillo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
+            this.cboPasillo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboPasillo.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.cboPasillo.ForeColor = System.Drawing.Color.White;
+            this.cboPasillo.FormattingEnabled = true;
+            this.cboPasillo.Location = new System.Drawing.Point(785, 256);
+            this.cboPasillo.Name = "cboPasillo";
+            this.cboPasillo.Size = new System.Drawing.Size(282, 33);
+            this.cboPasillo.TabIndex = 7;
+            // 
+            // cboEstante
+            // 
+            this.cboEstante.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
+            this.cboEstante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboEstante.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F);
+            this.cboEstante.ForeColor = System.Drawing.Color.White;
+            this.cboEstante.FormattingEnabled = true;
+            this.cboEstante.Location = new System.Drawing.Point(785, 373);
+            this.cboEstante.Name = "cboEstante";
+            this.cboEstante.Size = new System.Drawing.Size(282, 33);
+            this.cboEstante.TabIndex = 8;
+            // 
             // LibrosF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(1117, 633);
+            this.Controls.Add(this.cboEstante);
+            this.Controls.Add(this.cboPasillo);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtEstante);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.txtPasillo);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.nupExistencias);
@@ -395,8 +371,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nupExistencias)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,12 +396,10 @@
         private System.Windows.Forms.TextBox txtAnioPublicacion;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.NumericUpDown nupExistencias;
-        private System.Windows.Forms.TextBox txtEstante;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.TextBox txtPasillo;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cboPasillo;
+        private System.Windows.Forms.ComboBox cboEstante;
     }
 }

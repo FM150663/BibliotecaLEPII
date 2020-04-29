@@ -19,7 +19,6 @@ namespace Libreria
             label1.BackColor = Color.Transparent;
             label2.BackColor = Color.Transparent;
             label3.BackColor = Color.Transparent;
-            label4.BackColor = Color.Transparent;
             label5.BackColor = Color.Transparent;
         }
 
@@ -50,12 +49,7 @@ namespace Libreria
             this.Hide();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-            Busqueda n = new Busqueda();
-            n.Show();
-            this.Hide();
-        }
+
 
         private void label5_Click(object sender, EventArgs e)
         {

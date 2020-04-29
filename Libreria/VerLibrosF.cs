@@ -48,8 +48,10 @@ namespace Libreria
                                                  Existencias=l.existencias,
                                                  Pasillo =u.pasillo,
                                                  Estante=u.estante,
-                                                 ID = l.idLibro 
-                                                    }).ToList();
+                                                 ID = l.idLibro,
+                                                 Ubicacion="Ubicacion",
+                                                 Modificar = "Modificar"
+                                     }).ToList();
                 if (lista.Count > 0)
                 {
                     tabla = Utilidades.ConvertToDataTable(lista);
@@ -97,7 +99,9 @@ namespace Libreria
                                      Existencias = l.existencias,
                                      Pasillo = u.pasillo,
                                      Estante = u.estante,
-                                     ID = l.idLibro
+                                     ID = l.idLibro,
+                                     Ubicacion = "Ubicacion",
+                                     Modificar = "Modificar"
                                  }).ToList();
                     if (lista.Count > 0)
                     {
@@ -111,6 +115,8 @@ namespace Libreria
                         dgvLibros.Columns[5].Visible = false;
                         dgvLibros.Columns[6].Visible = false;
                         dgvLibros.Columns[7].Visible = false;
+                        dgvLibros.Columns[8].Visible = false;
+                        dgvLibros.Columns[9].Visible = false;
 
 
                     }
@@ -131,8 +137,16 @@ namespace Libreria
         private void dgvLibros_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             String id = dgvLibros.Rows[e.RowIndex].Cells[16].Value + "";
-            LibrosF n = new LibrosF(id);
-            n.Show();
+            if (e.ColumnIndex == 18)
+            {
+                LibrosF n = new LibrosF(id);
+                n.Show();
+            }
+            else
+            {
+                Busqueda n = new Busqueda(id);
+                n.Show();
+            }
             this.Hide();
         }
     }

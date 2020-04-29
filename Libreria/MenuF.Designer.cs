@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -74,28 +73,15 @@
             this.label3.Text = "(Resgistros)";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.Window;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(553, 397);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(162, 29);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "(Ubicaciones)";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.Window;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label5.Location = new System.Drawing.Point(38, 553);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 22);
+            this.label5.Size = new System.Drawing.Size(127, 22);
             this.label5.TabIndex = 4;
             this.label5.Text = "< REGRESAR";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -109,7 +95,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1052, 603);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -128,7 +113,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
     }
 }

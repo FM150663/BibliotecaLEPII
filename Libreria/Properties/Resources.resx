@@ -121,19 +121,22 @@
   <data name="libros3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\libros3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="libros" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\libros.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blur-book-stack-books-bookshelves-590493" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blur-book-stack-books-bookshelves-590493.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="libros2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\libros2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Modificar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Modificar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="libros" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\libros.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="background-book-stack-books-close-up-1148399" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background-book-stack-books-close-up-1148399.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blur-book-stack-books-bookshelves-590493" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blur-book-stack-books-bookshelves-590493.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Modificar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Modificar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Mapa con Grafos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mapa con Grafos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

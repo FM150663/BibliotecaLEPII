@@ -73,6 +73,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BibliotecaModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="CGrafo.cs" />
     <Compile Include="EDITORIAL.cs">
       <DependentUpon>BibliotecaModel.tt</DependentUpon>
     </Compile>
@@ -213,6 +214,7 @@
     <Content Include="libros.jpg" />
     <Content Include="libros2.jpg" />
     <Content Include="libros3.jpg" />
+    <None Include="Resources\Mapa con Grafos.png" />
     <None Include="Resources\blur-book-stack-books-bookshelves-590493.jpg" />
     <None Include="Resources\background-book-stack-books-close-up-1148399.jpg" />
     <None Include="Resources\Modificar.png" />

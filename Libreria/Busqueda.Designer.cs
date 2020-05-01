@@ -48,6 +48,7 @@
             this.lblExistencias = new System.Windows.Forms.Label();
             this.lblAnioPublicacion = new System.Windows.Forms.Label();
             this.mapa = new System.Windows.Forms.PictureBox();
+            this.btnRuta = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mapa)).BeginInit();
             this.SuspendLayout();
@@ -272,7 +273,7 @@
             // mapa
             // 
             this.mapa.BackColor = System.Drawing.Color.Transparent;
-            this.mapa.Image = global::Libreria.Properties.Resources.Modificar;
+            this.mapa.Image = global::Libreria.Properties.Resources.Mapa_con_Grafos;
             this.mapa.Location = new System.Drawing.Point(255, 112);
             this.mapa.Name = "mapa";
             this.mapa.Size = new System.Drawing.Size(971, 605);
@@ -281,12 +282,27 @@
             this.mapa.TabStop = false;
             this.mapa.Click += new System.EventHandler(this.mapa_Click);
             // 
+            // btnRuta
+            // 
+            this.btnRuta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(37)))), ((int)(((byte)(24)))));
+            this.btnRuta.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRuta.Font = new System.Drawing.Font("Malgun Gothic Semilight", 12F);
+            this.btnRuta.ForeColor = System.Drawing.Color.White;
+            this.btnRuta.Location = new System.Drawing.Point(50, 310);
+            this.btnRuta.Name = "btnRuta";
+            this.btnRuta.Size = new System.Drawing.Size(161, 45);
+            this.btnRuta.TabIndex = 39;
+            this.btnRuta.Text = "Mostrar Ruta";
+            this.btnRuta.UseVisualStyleBackColor = false;
+            this.btnRuta.Click += new System.EventHandler(this.btnRuta_Click);
+            // 
             // Busqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(41)))), ((int)(((byte)(46)))));
             this.ClientSize = new System.Drawing.Size(1447, 731);
+            this.Controls.Add(this.btnRuta);
             this.Controls.Add(this.lblAnioPublicacion);
             this.Controls.Add(this.lblExistencias);
             this.Controls.Add(this.groupBox1);
@@ -339,5 +355,6 @@
         private System.Windows.Forms.Label lblExistencias;
         private System.Windows.Forms.Label lblAnioPublicacion;
         private System.Windows.Forms.PictureBox mapa;
+        private System.Windows.Forms.Button btnRuta;
     }
 }
